@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ambree Paris — Spray Tan Sur-Mesure</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@200;300;400&display=swap');
+
+  /* ======================== */
+  /* RESET & BASE */
+  /* ======================== */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --lin: #EDE3D3;
+    --bordeaux: #3D0000;
+    --terra: #C4683A;
+    --bordeaux-soft: rgba(61,0,0,0.08);
+    --lin-text: rgba(237,227,211,0.6);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    background: var(--lin);
+    color: var(--bordeaux);
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* ======================== */
+  /* TYPOGRAPHY */
+  /* ======================== */
+  .serif { font-family: 'Cormorant Garamond', serif; }
+
+  h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    line-height: 1.1;
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .eyebrow-light {
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--lin);
+    opacity: 0.6;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  p { color: var(--bordeaux); opacity: 0.65; line-height: 1.8; margin-bottom: 12px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* ======================== */
+  /* BUTTONS */
+  /* ======================== */
+  .btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 24px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    text-decoration: none;
+  }
+  .btn:hover { opacity: 0.85; }
+  .btn-terra { background: var(--terra); color: var(--lin); }
+  .btn-bord { background: var(--bordeaux); color: var(--lin); }
+  .btn-out { border: 1px solid rgba(61,0,0,0.25); color: var(--bordeaux); }
+  .btn-out-light { border: 1px solid rgba(237,227,211,0.35); color: var(--lin); }
+  .btn-block { display: block; text-align: center; width: 100%; }
+
+  /* ======================== */
+  /* LINKS */
+  /* ======================== */
+  .link-under {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bordeaux);
+    border-bottom: 1px solid rgba(61,0,0,0.25);
+    padding-bottom: 2px;
+    text-decoration: none;
+  }
+
+  /* ======================== */
+  /* LAYOUT */
+  /* ======================== */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .section { padding: 70px 24px; }
+  .section-bord { background: var(--bordeaux); padding: 70px 24px; }
+  .section-terra { background: var(--terra); padding: 70px 24px; text-align: center; }
+
+  .divider { border: none; border-bottom: 1px solid var(--bordeaux-soft); }
+
+  /* GRID */
+  .grid-2 { display: grid; grid-template-columns: 1fr; gap: 30px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr; gap: 20px; }
+
+  /* ======================== */
+  /* NAVIGATION */
+  /* ======================== */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--lin);
+    border-bottom: 1px solid var(--bordeaux-soft);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--bordeaux);
+    letter-spacing: 4px;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: none;
+    gap: 28px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bordeaux);
+    opacity: 0.55;
+  }
+
+  .nav-links a { text-decoration: none; color: inherit; transition: opacity 0.2s; }
+  .nav-links a:hover { opacity: 1; }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .nav-lang {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: var(--bordeaux);
+    opacity: 0.5;
+    border: 1px solid rgba(61,0,0,0.2);
+    padding: 4px 9px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .nav-cta { display: none; }
+
+  /* ======================== */
+  /* HERO */
+  /* ======================== */
+  .hero {
+    position: relative;
+    height: 90vh;
+    min-height: 560px;
+    max-height: 800px;
+    background: linear-gradient(170deg, #5C2A10 0%, #3D1A08 55%, #2A0E04 100%);
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .hero-photo-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(237,227,211,0.12);
+    text-align: center;
+    line-height: 2.2;
+    pointer-events: none;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 60%;
+    background: linear-gradient(to top, rgba(61,0,0,0.9) 0%, transparent 100%);
+  }
+
+  .hero-nav {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(61,0,0,0.3) 0%, transparent 100%);
+    z-index: 10;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 5;
+    padding: 0 24px 50px;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 8vw, 80px);
+    font-weight: 300;
+    color: var(--lin);
+    line-height: 1.0;
+    margin-bottom: 24px;
+  }
+
+  .hero-title em { font-style: italic; }
+
+  /* ======================== */
+  /* PAGE HERO (inner pages) */
+  /* ======================== */
+  .page-hero {
+    background: var(--bordeaux);
+    padding: clamp(50px, 8vw, 100px) 24px clamp(44px, 7vw, 80px);
+  }
+
+  .page-hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(50px, 9vw, 88px);
+    font-weight: 300;
+    color: var(--lin);
+    line-height: 1.0;
+    margin-top: 10px;
+  }
+
+  .page-hero-title em { font-style: italic; }
+
+  /* ======================== */
+  /* SERVICE ROWS */
+  /* ======================== */
+  .service-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--bordeaux-soft);
+  }
+  .service-row:first-of-type { border-top: 1px solid var(--bordeaux-soft); }
+  .service-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--bordeaux); }
+  .service-name-en { font-size: 8px; letter-spacing: 1px; text-transform: uppercase; color: var(--bordeaux); opacity: 0.3; margin-top: 2px; }
+  .service-price { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--terra); flex-shrink: 0; margin-left: 16px; }
+
+  /* ======================== */
+  /* TESTIMONIALS */
+  /* ======================== */
+  .testi { padding: 20px 0; border-bottom: 1px solid var(--bordeaux-soft); }
+  .testi:last-child { border-bottom: none; padding-bottom: 0; }
+  .testi-stars { font-size: 11px; color: var(--terra); letter-spacing: 3px; margin-bottom: 8px; }
+  .testi-text { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; color: var(--bordeaux); line-height: 1.6; margin-bottom: 8px; opacity: 1; }
+  .testi-author { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--bordeaux); opacity: 0.35; }
+
+  /* ======================== */
+  /* BLOG CARDS */
+  /* ======================== */
+  .blog-scroll-wrap {
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin: 0 -24px;
+    padding: 0 24px;
+  }
+  .blog-scroll-wrap::-webkit-scrollbar { display: none; }
+  .blog-scroll {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    padding-right: 24px;
+  }
+
+  .blog-card {
+    width: 260px;
+    border: 1px solid var(--bordeaux-soft);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--lin);
+    flex-shrink: 0;
+  }
+
+  .blog-card-img {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(237,227,211,0.4);
+  }
+
+  .blog-card-body { padding: 18px; }
+  .blog-card-cat { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--terra); margin-bottom: 6px; }
+  .blog-card-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--bordeaux); line-height: 1.3; margin-bottom: 10px; opacity: 1; }
+  .blog-card-link { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--bordeaux); opacity: 0.4; text-decoration: none; }
+
+  /* ======================== */
+  /* NUANCIER */
+  /* ======================== */
+  .nuancier { display: flex; }
+  .shade {
+    flex: 1;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 14px 12px;
+  }
+  .shade-num { font-size: 8px; opacity: 0.5; margin-bottom: 4px; }
+  .shade-name { font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1.2; }
+
+  /* ======================== */
+  /* METHODE STEPS */
+  /* ======================== */
+  .step { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--bordeaux-soft); align-items: flex-start; }
+  .step:last-child { border-bottom: none; }
+  .step-num { font-family: 'Cormorant Garamond', serif; font-size: 32px; color: var(--terra); opacity: 0.45; line-height: 1; width: 36px; flex-shrink: 0; }
+  .step-title { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--bordeaux); margin-bottom: 4px; }
+  .step-text { font-size: 11px; color: var(--bordeaux); opacity: 0.55; line-height: 1.7; }
+
+  /* ======================== */
+  /* VALEURS */
+  /* ======================== */
+  .val { padding: 18px 0; border-bottom: 1px solid var(--bordeaux-soft); }
+  .val:last-child { border-bottom: none; }
+  .val-name { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 6px; }
+  .val-text { font-size: 12px; color: var(--bordeaux); opacity: 0.6; line-height: 1.7; }
+
+  /* ======================== */
+  /* TAGS */
+  /* ======================== */
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .tag { padding: 6px 14px; border: 1px solid rgba(61,0,0,0.18); border-radius: 20px; font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--bordeaux); }
+
+  /* ======================== */
+  /* CONTACT */
+  /* ======================== */
+  .con-row { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--bordeaux-soft); align-items: flex-start; }
+  .con-row:last-child { border-bottom: none; }
+  .con-icon { font-size: 16px; width: 28px; flex-shrink: 0; padding-top: 2px; }
+  .con-label { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--terra); margin-bottom: 3px; }
+  .con-value { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--bordeaux); }
+  .con-note { font-size: 9px; color: var(--bordeaux); opacity: 0.35; }
+
+  /* ======================== */
+  /* FORM */
+  /* ======================== */
+  .form-field { margin-bottom: 14px; }
+  .form-label { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--bordeaux); opacity: 0.45; margin-bottom: 6px; display: block; }
+  .form-input {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(61,0,0,0.04);
+    border: 1px solid rgba(61,0,0,0.12);
+    border-radius: 6px;
+    font-size: 12px;
+    color: var(--bordeaux);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    outline: none;
+  }
+  .form-input:focus { border-color: rgba(61,0,0,0.3); }
+  .form-textarea { height: 120px; resize: none; }
+  .form-note { font-size: 8px; color: var(--bordeaux); opacity: 0.3; text-align: center; margin-top: 10px; letter-spacing: 1px; }
+
+  /* ======================== */
+  /* BLOG FILTERS */
+  /* ======================== */
+  .filters { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 20px; scrollbar-width: none; margin-bottom: 10px; }
+  .filters::-webkit-scrollbar { display: none; }
+  .filter-active { flex-shrink: 0; padding: 6px 16px; background: var(--bordeaux); border-radius: 16px; font-size: 8px; letter-spacing: 1px; text-transform: uppercase; color: var(--lin); cursor: pointer; }
+  .filter-inactive { flex-shrink: 0; padding: 6px 16px; border: 1px solid rgba(61,0,0,0.15); border-radius: 16px; font-size: 8px; letter-spacing: 1px; text-transform: uppercase; color: var(--bordeaux); cursor: pointer; }
+
+  /* ======================== */
+  /* BEFORE/AFTER GRID */
+  /* ======================== */
+  .aa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .aa-cell { border-radius: 8px; height: 160px; display: flex; align-items: flex-end; padding: 10px; }
+  .aa-label { font-size: 8px; padding: 4px 10px; border-radius: 10px; }
+
+  /* ======================== */
+  /* FOOTER */
+  /* ======================== */
+  .footer {
+    background: var(--lin);
+    border-top: 1px solid var(--bordeaux-soft);
+    padding: 40px 24px 28px;
+  }
+
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--bordeaux); letter-spacing: 4px; margin-bottom: 6px; }
+  .footer-tagline { font-size: 8px; letter-spacing: 2px; color: var(--bordeaux); opacity: 0.3; margin-bottom: 20px; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-bottom: 20px; }
+  .footer-link { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--bordeaux); opacity: 0.4; text-decoration: none; }
+  .footer-bottom { font-size: 8px; color: var(--bordeaux); opacity: 0.2; line-height: 1.8; }
+
+  /* ======================== */
+  /* EDITORIAL PHOTO LAYOUT */
+  /* ======================== */
+  .editorial { display: flex; gap: 24px; align-items: flex-start; }
+  .editorial-photo {
+    width: 120px;
+    height: 150px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    background: linear-gradient(160deg, #8B5E3C, #5C2A10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    color: rgba(237,227,211,0.35);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* ======================== */
+  /* NEWSLETTER */
+  /* ======================== */
+  .newsletter-input {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(237,227,211,0.08);
+    border: 1px solid rgba(237,227,211,0.2);
+    border-radius: 24px;
+    font-size: 11px;
+    color: var(--lin);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin-bottom: 10px;
+    outline: none;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .newsletter-input::placeholder { color: rgba(237,227,211,0.4); }
+
+  /* ======================== */
+  /* INFO NOTE */
+  /* ======================== */
+  .info-note { padding: 12px 16px; background: rgba(61,0,0,0.04); border-left: 2px solid var(--terra); font-size: 10px; color: var(--bordeaux); opacity: 0.7; line-height: 1.6; margin-top: 16px; border-radius: 0 4px 4px 0; }
+
+  /* ======================== */
+  /* PAGE SWITCHER (demo) */
+  /* ======================== */
+  .page-nav {
+    background: #1A1010;
+    padding: 16px 24px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+  }
+  .page-btn { padding: 6px 14px; background: rgba(237,227,211,0.1); border-radius: 12px; font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: #EDE3D3; cursor: pointer; border: none; font-family: 'Montserrat', sans-serif; transition: background 0.2s; }
+  .page-btn:hover, .page-btn.active { background: #C4683A; }
+
+  .page-content { display: none; }
+  .page-content.active { display: block; }
+
+  /* ======================== */
+  /* RESPONSIVE — TABLET+ */
+  /* ======================== */
+  @media (min-width: 640px) {
+    .section, .section-bord, .section-terra { padding: 80px 40px; }
+    .page-hero { padding: 80px 40px 70px; }
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+    .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+    .nav { padding: 18px 40px; }
+    .container { padding: 0 40px; }
+    .hero-content { padding: 0 40px 60px; }
+    .hero-nav { padding: 20px 40px; }
+    .editorial-photo { width: 180px; height: 220px; }
+    .blog-card { width: 300px; }
+    .footer { padding: 50px 40px 32px; display: flex; justify-content: space-between; align-items: flex-start; }
+    .footer-tagline { margin-bottom: 0; }
+    .footer-links { margin-bottom: 0; }
+  }
+
+  /* ======================== */
+  /* RESPONSIVE — DESKTOP */
+  /* ======================== */
+  @media (min-width: 1024px) {
+    .section, .section-bord, .section-terra { padding: 90px 60px; }
+    .page-hero { padding: 100px 60px 90px; }
+    .nav { padding: 20px 60px; }
+    .nav-links { display: flex; }
+    .nav-cta { display: inline-block; }
+    .container { padding: 0 60px; max-width: 1100px; margin: 0 auto; }
+    .hero-content { padding: 0 60px 70px; }
+    .hero-nav { padding: 24px 60px; }
+    .blog-scroll-wrap { overflow-x: visible; margin: 0; padding: 0; }
+    .blog-scroll { display: grid; grid-template-columns: 1fr 1fr; width: auto; padding-right: 0; }
+    .blog-card { width: auto; }
+    .editorial-photo { width: 220px; height: 280px; }
+    .nuancier .shade { height: 220px; padding: 20px; }
+    .shade-name { font-size: 16px; }
+    .aa-grid { grid-template-columns: repeat(4, 1fr); }
+    .aa-cell { height: 180px; }
+    .testi { display: none; }
+    .testi-grid { display: grid !important; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .footer { padding: 50px 60px 32px; }
+    .page-hero-title { font-size: clamp(60px, 7vw, 88px); }
+  }
+
+  /* Testi grid hidden on mobile, shown on desktop */
+  .testi-grid { display: none; }
+  @media (min-width: 1024px) {
+    .testi-mobile { display: none; }
+    .testi-grid { display: grid; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- PAGE SWITCHER (pour la démo) -->
+<div class="page-nav">
+  <button class="page-btn active" onclick="showPage('accueil')">Accueil</button>
+  <button class="page-btn" onclick="showPage('marque')">La Marque</button>
+  <button class="page-btn" onclick="showPage('prestations')">Prestations</button>
+  <button class="page-btn" onclick="showPage('blog')">Blog</button>
+  <button class="page-btn" onclick="showPage('apropos')">À Propos</button>
+  <button class="page-btn" onclick="showPage('contact')">Contact</button>
+</div>
+
+<!-- ======================== -->
+<!-- PAGE 01 — ACCUEIL -->
+<!-- ======================== -->
+<div id="accueil" class="page-content active">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">ambree</a>
+    <div class="nav-links">
+      <a href="#" onclick="showPage('marque')">La Marque</a>
+      <a href="#" onclick="showPage('prestations')">Prestations</a>
+      <a href="#" onclick="showPage('blog')">Blog</a>
+      <a href="#" onclick="showPage('apropos')">À Propos</a>
+      <a href="#" onclick="showPage('contact')">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-lang">FR | EN</div>
+      <a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-photo-label">PHOTO PLEIN ÉCRAN<br>close-up · peau dorée · lumière naturelle</div>
+    <div class="hero-overlay"></div>
+    <div class="hero-nav">
+      <a href="#" class="nav-logo" style="color:var(--lin);">ambree</a>
+      <div class="nav-right">
+        <div class="nav-lang" style="color:var(--lin); border-color:rgba(237,227,211,0.3);">FR | EN</div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <span class="eyebrow-light">Spray Tan Sur-Mesure · Paris</span>
+      <h1 class="hero-title">Votre peau,<br><em>sublimée.</em></h1>
+      <a href="https://calendly.com/hello-ambree-paris/spray-tan-studio-paris-9e" target="_blank" class="btn btn-terra">Prendre rendez-vous</a>
+    </div>
+  </section>
+
+  <!-- IDENTITE -->
+  <section class="section" style="text-align:center; max-width:700px; margin:0 auto;">
+    <span class="eyebrow">Ambree Paris</span>
+    <h2 style="font-size:clamp(22px,3.5vw,30px); font-style:italic; color:var(--bordeaux); line-height:1.35; margin-bottom:16px;">"Toutes les peaux méritent un bronzage lumineux, naturel et pensé pour elles."</h2>
+    <p style="margin-bottom:20px;">Une expérience sur-mesure, du soin apporté à chaque cliente, pour chaque carnation. Sans soleil, sans compromis pour votre peau.</p>
+    <a href="#" class="link-under" onclick="showPage('marque')">Découvrir la marque →</a>
+  </section>
+
+  <hr class="divider">
+
+  <!-- PRESTATIONS -->
+  <section class="section">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px; margin-bottom:28px;">
+      <div><span class="eyebrow">Nos prestations</span><h2 style="font-size:clamp(28px,4vw,40px);">À la carte</h2></div>
+      <a href="https://calendly.com/hello-ambree-paris/spray-tan-studio-paris-9e" target="_blank" class="btn btn-terra">Prendre rendez-vous</a>
+    </div>
+    <div class="service-row"><div><div class="service-name">Corps entier & Visage</div><div class="service-name-en">Full Body & Face</div></div><div class="service-price">50€</div></div>
+    <div class="service-row"><div><div class="service-name">Corps entier</div><div class="service-name-en">Full Body</div></div><div class="service-price">40€</div></div>
+    <div class="service-row"><div><div class="service-name">Haut du corps</div><div class="service-name-en">Upper Body</div></div><div class="service-price">35€</div></div>
+    <div class="service-row"><div><div class="service-name">Bas du corps</div><div class="service-name-en">Lower Body</div></div><div class="service-price">30€</div></div>
+    <div class="service-row"><div><div class="service-name">Visage & Décolleté</div><div class="service-name-en">Face & Décolleté</div></div><div class="service-price">25€</div></div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- TEMOIGNAGES -->
+  <section class="section">
+    <span class="eyebrow">Ce qu'elles disent</span>
+    <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:28px;">Elles ont essayé,<br>elles ont adoré.</h2>
+    <!-- Mobile -->
+    <div class="testi-mobile">
+      <div class="testi"><div class="testi-stars">★★★★★</div><div class="testi-text">"Un résultat vraiment naturel. J'ai eu des compliments toute la semaine."</div><div class="testi-author">— Marie L. · Google</div></div>
+      <div class="testi"><div class="testi-stars">★★★★★</div><div class="testi-text">"Sophia prend le temps d'analyser votre peau. Le résultat est parfaitement adapté."</div><div class="testi-author">— Camille R. · Instagram</div></div>
+    </div>
+    <!-- Desktop grid -->
+    <div class="testi-grid" style="display:none;">
+      <div style="padding:28px; border:1px solid var(--bordeaux-soft); border-radius:10px;"><div class="testi-stars">★★★★★</div><div class="testi-text">"Un résultat vraiment naturel. J'ai eu des compliments toute la semaine."</div><div class="testi-author">— Marie L. · Google</div></div>
+      <div style="padding:28px; border:1px solid var(--bordeaux-soft); border-radius:10px;"><div class="testi-stars">★★★★★</div><div class="testi-text">"Sophia prend le temps d'analyser votre peau. Le résultat est parfaitement adapté."</div><div class="testi-author">— Camille R. · Instagram</div></div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- BLOG -->
+  <section class="section">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:12px; margin-bottom:24px;">
+      <div><span class="eyebrow">Le blog</span><h2 style="font-size:clamp(26px,4vw,38px);">À lire aussi</h2></div>
+      <a href="#" class="link-under" onclick="showPage('blog')">Voir tous les articles →</a>
+    </div>
+    <div class="blog-scroll-wrap">
+      <div class="blog-scroll">
+        <div class="blog-card"><div class="blog-card-img" style="background:linear-gradient(135deg,#8B5E3C,#C4683A);">photo</div><div class="blog-card-body"><div class="blog-card-cat">Éducation peau</div><div class="blog-card-title">The Silent Damage: What No One Tells You About Sun Exposure</div><a href="#" class="blog-card-link">Lire l'article →</a></div></div>
+        <div class="blog-card"><div class="blog-card-img" style="background:linear-gradient(135deg,#6B7C4E,#3D0000);">photo</div><div class="blog-card-body"><div class="blog-card-cat">Spray Tan</div><div class="blog-card-title">Getting a Spray Tan for the First Time — A Complete Guide</div><a href="#" class="blog-card-link">Lire l'article →</a></div></div>
+      </div>
+    </div>
+    <p style="font-size:8px; opacity:0.3; margin-top:10px; letter-spacing:1px;" class="mobile-only">← Glisser pour voir plus</p>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section-terra">
+    <h2 style="font-size:clamp(28px,5vw,44px); font-style:italic; color:var(--lin); margin-bottom:12px; font-weight:300;">Prête pour votre hâle ?</h2>
+    <p style="color:var(--lin); opacity:0.65;">Studio Paris 9e · À domicile disponible · Prenez rendez-vous en quelques secondes.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div>
+    <div class="footer-links">
+      <a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a>
+      <a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a>
+      <a href="#" class="footer-link" onclick="showPage('blog')">Blog</a>
+      <a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a>
+      <a href="#" class="footer-link" onclick="showPage('contact')">Contact</a>
+    </div>
+    <div class="footer-bottom">© 2026 Ambree Paris · hello@ambree-paris.fr · Mentions légales</div>
+  </footer>
+</div>
+
+<!-- ======================== -->
+<!-- PAGE 02 — LA MARQUE -->
+<!-- ======================== -->
+<div id="marque" class="page-content">
+  <nav class="nav"><a href="#" class="nav-logo">ambree</a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+
+  <div class="page-hero">
+    <span class="eyebrow-light">La Marque</span>
+    <h1 class="page-hero-title">L'univers<br><em>Ambree</em></h1>
+  </div>
+
+  <!-- MISSION + VALEURS -->
+  <section class="section">
+    <div class="grid-2" style="gap:50px;">
+      <div>
+        <span class="eyebrow">Mission</span>
+        <h2 style="font-size:clamp(20px,3vw,26px); font-style:italic; line-height:1.4;">"Mettre du soleil dans votre quotidien, sans compromis pour votre peau."</h2>
+      </div>
+      <div>
+        <span class="eyebrow">Nos valeurs</span>
+        <div class="val"><div class="val-name">Beauté saine et naturelle</div><div class="val-text">Un résultat qui ressemble à un vrai bronzage, jamais à un masque. Des produits respectueux de votre peau.</div></div>
+        <div class="val"><div class="val-name">Client-first</div><div class="val-text">Une expérience pensée et orientée client, du premier message à la dernière recommandation.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- METHODE -->
+  <section class="section">
+    <span class="eyebrow">Notre approche</span>
+    <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:8px;">La Méthode Ambree</h2>
+    <p style="margin-bottom:28px;">Un beau hâle ne s'improvise pas — il se pense. Une approche en trois temps.</p>
+    <div class="grid-3">
+      <div style="padding:22px; border:1px solid var(--bordeaux-soft); border-radius:8px;">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:36px; color:var(--terra); opacity:0.45; margin-bottom:8px;">01</div>
+        <div class="step-title">La consultation</div>
+        <div class="step-text">Vos envies, le résultat que vous recherchez. Ce moment transforme une simple prestation en expérience sur-mesure.</div>
+      </div>
+      <div style="padding:22px; border:1px solid var(--bordeaux-soft); border-radius:8px;">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:36px; color:var(--terra); opacity:0.45; margin-bottom:8px;">02</div>
+        <div class="step-title">L'analyse de votre carnation</div>
+        <div class="step-text">Tons, sous-tons — la nuance discrète qui détermine quelle teinte vous ira vraiment.</div>
+      </div>
+      <div style="padding:22px; border:1px solid var(--bordeaux-soft); border-radius:8px;">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:36px; color:var(--terra); opacity:0.45; margin-bottom:8px;">03</div>
+        <div class="step-title">Le hâle sur-mesure</div>
+        <div class="step-text">La teinte la plus adaptée parmi le nuancier Ambree. Un bronzage qui semble venir de vous.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUANCIER -->
+  <hr class="divider">
+  <section class="section" style="padding-bottom:0;">
+    <span class="eyebrow">Le nuancier</span>
+    <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:6px;">4 teintes pour chaque carnation</h2>
+    <p style="margin-bottom:0;">Choisie selon votre phototype, vos tons et vos sous-tons — jamais au hasard.</p>
+  </section>
+  <div class="nuancier">
+    <div class="shade" style="background:#D4A96A; color:#3D0000;"><div class="shade-num">01</div><div class="shade-name">Douceur<br>de Lin</div></div>
+    <div class="shade" style="background:#C4683A; color:#EDE3D3;"><div class="shade-num">02</div><div class="shade-name">Miel<br>Sauvage</div></div>
+    <div class="shade" style="background:#6B7C4E; color:#EDE3D3;"><div class="shade-num">03</div><div class="shade-name">Dune du<br>Sahara</div></div>
+    <div class="shade" style="background:#3D0000; color:#EDE3D3;"><div class="shade-num">04</div><div class="shade-name">Épicé</div></div>
+  </div>
+
+  <!-- PRODUITS -->
+  <hr class="divider">
+  <section class="section">
+    <span class="eyebrow">Les produits</span>
+    <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:14px;">Vegan, clean,<br>sans compromis</h2>
+    <p>Les produits que j'utilise sont soigneusement sélectionnés : vegan, sans parabènes, à la DHA végétale — pour un résultat beau et respectueux de votre peau.</p>
+    <div class="tags"><span class="tag">Vegan</span><span class="tag">Sans parabènes</span><span class="tag">DHA végétale</span></div>
+  </section>
+
+  <section class="section-terra">
+    <h2 style="font-size:clamp(26px,4vw,40px); font-style:italic; color:var(--lin); margin-bottom:12px; font-weight:300;">Prête à découvrir votre teinte ?</h2>
+    <p style="color:var(--lin); opacity:0.65; margin-bottom:22px;">Studio Paris 9e · À domicile disponible.</p>
+    <a href="#" class="btn btn-bord">Prendre rendez-vous</a>
+  </section>
+
+  <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a><a href="#" class="footer-link" onclick="showPage('contact')">Contact</a></div><div class="footer-bottom">© 2026 Ambree Paris · hello@ambree-paris.fr</div></footer>
+</div>
+
+<!-- ======================== -->
+<!-- PAGE 03 — PRESTATIONS -->
+<!-- ======================== -->
+<div id="prestations" class="page-content">
+  <nav class="nav"><a href="#" class="nav-logo">ambree</a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+
+  <div class="page-hero">
+    <span class="eyebrow-light">Prestations</span>
+    <h1 class="page-hero-title">À la<br><em>carte</em></h1>
+    <p style="color:var(--lin); opacity:0.5; margin-top:14px;">Studio Paris 9e · À domicile disponible sur demande.</p>
+  </div>
+
+  <section class="section">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px; margin-bottom:28px;">
+      <div><span class="eyebrow">Nos tarifs</span><h2 style="font-size:clamp(26px,4vw,38px);">Choisissez votre séance</h2></div>
+      <a href="#" class="btn btn-terra">Prendre rendez-vous</a>
+    </div>
+    <div class="service-row"><div><div class="service-name">Corps entier & Visage</div><div class="service-name-en">Full Body & Face</div></div><div class="service-price">50€</div></div>
+    <div class="service-row"><div><div class="service-name">Corps entier</div><div class="service-name-en">Full Body</div></div><div class="service-price">40€</div></div>
+    <div class="service-row"><div><div class="service-name">Haut du corps</div><div class="service-name-en">Upper Body</div></div><div class="service-price">35€</div></div>
+    <div class="service-row"><div><div class="service-name">Bas du corps</div><div class="service-name-en">Lower Body</div></div><div class="service-price">30€</div></div>
+    <div class="service-row"><div><div class="service-name">Visage & Décolleté</div><div class="service-name-en">Face & Décolleté</div></div><div class="service-price">25€</div></div>
+    <div class="info-note">Tarif préférentiel disponible pour les réservations groupées — me contacter.</div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- AVANT APRES -->
+  <section class="section">
+    <span class="eyebrow">Résultats</span>
+    <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:22px;">Avant / Après</h2>
+    <div class="aa-grid">
+      <div class="aa-cell" style="background:linear-gradient(135deg,#E8C9A0,#D4A96A);"><span class="aa-label" style="background:rgba(255,255,255,0.6); color:#3D0000;">Avant</span></div>
+      <div class="aa-cell" style="background:linear-gradient(135deg,#C4683A,#8B4A1E);"><span class="aa-label" style="background:rgba(61,0,0,0.5); color:#EDE3D3;">Après</span></div>
+      <div class="aa-cell" style="background:linear-gradient(135deg,#D4B896,#C4A070);"><span class="aa-label" style="background:rgba(255,255,255,0.6); color:#3D0000;">Avant</span></div>
+      <div class="aa-cell" style="background:linear-gradient(135deg,#8B5E3C,#6B3A1E);"><span class="aa-label" style="background:rgba(61,0,0,0.5); color:#EDE3D3;">Après</span></div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- INFOS PRATIQUES -->
+  <section class="section">
+    <span class="eyebrow">Bon à savoir</span>
+    <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:22px;">Infos pratiques</h2>
+    <div class="grid-2" style="gap:0;">
+      <div>
+        <div class="con-row"><div class="con-icon">📍</div><div><div class="con-label">Studio</div><div class="con-value">Oui Beauty · Paris 9e</div><div class="con-note">2 rue de Provence, 75009</div></div></div>
+        <div class="con-row"><div class="con-icon">🏠</div><div><div class="con-label">À domicile</div><div class="con-value">Sur demande</div><div class="con-note">Certains arrondissements</div></div></div>
+      </div>
+      <div>
+        <div class="con-row"><div class="con-icon">⏱</div><div><div class="con-label">Durée</div><div class="con-value">10 à 30 minutes</div></div></div>
+        <div class="con-row"><div class="con-icon">💳</div><div><div class="con-label">Paiement</div><div class="con-value">Wero · Espèces</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-terra">
+    <h2 style="font-size:clamp(26px,4vw,40px); font-style:italic; color:var(--lin); margin-bottom:12px; font-weight:300;">Prête pour votre hâle ?</h2>
+    <p style="color:var(--lin); opacity:0.65; margin-bottom:22px;">Prenez rendez-vous en quelques secondes.</p>
+    <a href="#" class="btn btn-bord">Réserver ma séance</a>
+  </section>
+
+  <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a><a href="#" class="footer-link" onclick="showPage('contact')">Contact</a></div><div class="footer-bottom">© 2026 Ambree Paris · hello@ambree-paris.fr</div></footer>
+</div>
+
+<!-- ======================== -->
+<!-- PAGE 04 — BLOG -->
+<!-- ======================== -->
+<div id="blog" class="page-content">
+  <nav class="nav"><a href="#" class="nav-logo">ambree</a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+
+  <div class="page-hero">
+    <span class="eyebrow-light">Le Blog</span>
+    <h1 class="page-hero-title">Peau, soleil<br><em>& beauté.</em></h1>
+    <p style="color:var(--lin); opacity:0.5; margin-top:14px;">Conseils, éducation peau et coulisses d'Ambree — par Sophia.</p>
+  </div>
+
+  <section class="section">
+    <div class="filters">
+      <div class="filter-active">Tous</div>
+      <div class="filter-inactive">Éducation peau</div>
+      <div class="filter-inactive">Spray Tan</div>
+      <div class="filter-inactive">Skincare</div>
+      <div class="filter-inactive">Ambree</div>
+    </div>
+
+    <div class="grid-2" style="gap:30px; align-items:start;">
+      <!-- Featured -->
+      <div>
+        <span class="eyebrow">À la une</span>
+        <div class="blog-card" style="width:100%;">
+          <div class="blog-card-img" style="background:linear-gradient(135deg,#8B5E3C,#C4683A); height:200px;">photo article</div>
+          <div class="blog-card-body" style="padding:22px;">
+            <div class="blog-card-cat">Éducation peau</div>
+            <div class="blog-card-title" style="font-size:20px; margin-bottom:10px;">The Silent Damage: What No One Tells You About Sun Exposure</div>
+            <p style="font-size:11px; margin-bottom:14px;">On nous répète depuis toujours de mettre de la crème solaire. Mais ce qu'on nous dit rarement…</p>
+            <a href="#" class="link-under">Lire l'article →</a>
+          </div>
+        </div>
+      </div>
+      <!-- Liste -->
+      <div>
+        <span class="eyebrow">Tous les articles</span>
+        <div style="display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--bordeaux-soft); align-items:flex-start;">
+          <div style="width:80px; height:80px; border-radius:6px; background:linear-gradient(135deg,#6B7C4E,#3D2010); flex-shrink:0;"></div>
+          <div><div class="blog-card-cat">Spray Tan</div><div class="blog-card-title" style="font-size:16px; margin-bottom:4px;">Getting a Spray Tan for the First Time</div><div style="font-size:8px; color:var(--bordeaux); opacity:0.3; letter-spacing:1px;">Juin 2026</div></div>
+        </div>
+        <div style="display:flex; gap:14px; padding:16px 0; align-items:flex-start; opacity:0.35;">
+          <div style="width:80px; height:80px; border-radius:6px; background:rgba(61,0,0,0.08); border:1px dashed rgba(61,0,0,0.15); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:8px; color:var(--bordeaux);">bientôt</div>
+          <div><div class="blog-card-cat">Skincare</div><div class="blog-card-title" style="font-size:16px; margin-bottom:4px;">Prochain article — bientôt disponible</div><div style="font-size:8px; color:var(--bordeaux); opacity:0.3; letter-spacing:1px;">À venir</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section-bord" style="text-align:center;">
+    <span class="eyebrow-light">Restez informée</span>
+    <h2 style="font-size:clamp(26px,4vw,38px); font-style:italic; color:var(--lin); margin-bottom:12px; font-weight:300;">Ne manquez aucun article</h2>
+    <p style="color:var(--lin); opacity:0.55; margin-bottom:22px; max-width:460px; margin-left:auto; margin-right:auto;">Conseils peau et nouveautés directement dans votre boîte mail.</p>
+    <div style="max-width:420px; margin:0 auto;">
+      <input type="email" class="newsletter-input" placeholder="Votre adresse email">
+      <a href="#" class="btn btn-terra btn-block">S'inscrire</a>
+    </div>
+  </section>
+
+  <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a><a href="#" class="footer-link" onclick="showPage('contact')">Contact</a></div><div class="footer-bottom">© 2026 Ambree Paris · hello@ambree-paris.fr</div></footer>
+</div>
+
+<!-- ======================== -->
+<!-- PAGE 05 — À PROPOS -->
+<!-- ======================== -->
+<div id="apropos" class="page-content">
+  <nav class="nav"><a href="#" class="nav-logo">ambree</a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+
+  <div class="page-hero">
+    <span class="eyebrow-light">À Propos</span>
+    <h1 class="page-hero-title" style="font-style:italic;">À Propos</h1>
+  </div>
+
+  <!-- INTRO EDITORIALE -->
+  <section class="section">
+    <div class="editorial" style="margin-bottom:22px;">
+      <div class="editorial-photo">photo<br>Sophia</div>
+      <div>
+        <span class="eyebrow">Fondatrice</span>
+        <h2 style="font-size:clamp(24px,4vw,34px); margin-bottom:4px;">Sophia</h2>
+        <div style="font-size:8px; letter-spacing:2px; text-transform:uppercase; color:var(--bordeaux); opacity:0.35; margin-bottom:14px;">Spray Tan Artist · Paris</div>
+        <p>J'ai 34 ans, et je viens tout juste de me lancer dans l'entrepreneuriat. Après six ans dans les achats industriels, j'ai décidé de sauter le pas.</p>
+      </div>
+    </div>
+    <p>Une passion de toujours — j'adore la skincare, découvrir de nouveaux produits et comprendre ce qu'ils font vraiment à la peau.</p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- HISTOIRE -->
+  <section class="section">
+    <div class="grid-2" style="gap:50px;">
+      <div>
+        <span class="eyebrow">L'origine d'Ambree</span>
+        <h2 style="font-size:clamp(24px,4vw,34px); font-style:italic; margin-bottom:16px;">"Née d'une évidence."</h2>
+        <p>Depuis mes 16 ans, il y a une chose que je redoutais : les journées à la plage. J'ai une peau de type I — très claire, qui brûle systématiquement au soleil. Pendant que les autres bronzaient, j'étais sous le parasol.</p>
+      </div>
+      <div style="padding-top:0;">
+        <p style="margin-bottom:20px;">Au fil de mes recherches, j'ai compris que ce besoin n'était pas que le mien. C'est de là qu'est née Ambree.</p>
+        <div style="border-left:2px solid var(--terra); padding-left:16px; margin-bottom:20px;">
+          <p style="font-family:'Cormorant Garamond',serif; font-size:18px; font-style:italic; opacity:1; color:var(--bordeaux);">"Toutes les peaux méritent un bronzage lumineux, naturel et pensé pour elles."</p>
+        </div>
+        <a href="#" class="link-under" onclick="showPage('marque')">Découvrir l'univers Ambree →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-terra" style="text-align:center;">
+    <h2 style="font-size:clamp(26px,4vw,40px); font-style:italic; color:var(--lin); margin-bottom:12px; font-weight:300;">Envie de nous rencontrer ?</h2>
+    <p style="color:var(--lin); opacity:0.65; margin-bottom:22px;">Studio Paris 9e · À domicile disponible.</p>
+    <a href="#" class="btn btn-bord">Prendre rendez-vous</a>
+  </section>
+
+  <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('contact')">Contact</a></div><div class="footer-bottom">© 2026 Ambree Paris · hello@ambree-paris.fr</div></footer>
+</div>
+
+<!-- ======================== -->
+<!-- PAGE 06 — CONTACT -->
+<!-- ======================== -->
+<div id="contact" class="page-content">
+  <nav class="nav"><a href="#" class="nav-logo">ambree</a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+
+  <div class="page-hero">
+    <span class="eyebrow-light">Contact</span>
+    <h1 class="page-hero-title" style="font-style:italic;">Contact</h1>
+    <p style="color:var(--lin); opacity:0.5; margin-top:14px;">Pour toute question, réservation ou demande particulière.</p>
+  </div>
+
+  <section class="section">
+    <div class="grid-2" style="gap:60px;">
+      <!-- Infos -->
+      <div>
+        <span class="eyebrow">Nous trouver</span>
+        <h2 style="font-size:clamp(24px,3.5vw,32px); margin-bottom:22px;">Infos pratiques</h2>
+        <div class="con-row"><div class="con-icon">✉</div><div><div class="con-label">Email</div><div class="con-value">hello@ambree-paris.fr</div></div></div>
+        <div class="con-row"><div class="con-icon">📍</div><div><div class="con-label">Studio</div><div class="con-value">Oui Beauty · Paris 9e</div><div class="con-note">2 rue de Provence, 75009 Paris</div></div></div>
+        <div class="con-row"><div class="con-icon">🏠</div><div><div class="con-label">À domicile</div><div class="con-value">Sur demande</div><div class="con-note">Certains arrondissements · Les demandes de réservation à domicile sont à effectuer via le formulaire ci-dessous.</div></div></div>
+        <div style="margin-top:30px;">
+          <span class="eyebrow">Suivez-nous</span>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:22px; color:var(--bordeaux); margin-bottom:6px;">@ambree.paris</div>
+          <div style="font-size:9px; color:var(--bordeaux); opacity:0.35; margin-bottom:14px; letter-spacing:1px;">Spray tan, conseils peau & coulisses</div>
+          <a href="#" class="btn btn-out">Voir sur Instagram →</a>
+        </div>
+      </div>
+      <!-- Formulaire -->
+      <div>
+        <span class="eyebrow">Nous écrire</span>
+        <h2 style="font-size:clamp(24px,3.5vw,32px); margin-bottom:22px;">Envoyez-nous<br>un message</h2>
+        <div class="grid-2" style="gap:12px;">
+          <div class="form-field"><label class="form-label">Prénom</label><input type="text" id="contact-prenom" class="form-input" placeholder="Marie"></div>
+          <div class="form-field"><label class="form-label">Email</label><input type="email" id="contact-email" class="form-input" placeholder="marie@email.com"></div>
+        </div>
+        <div class="form-field"><label class="form-label">Message</label><textarea id="contact-message" class="form-input form-textarea" placeholder="Bonjour Sophia…"></textarea></div>
+        <a href="#" class="btn btn-terra btn-block" style="margin-top:4px;" onclick="sendEmail(); return false;">Envoyer</a>
+        <div class="form-note">Réponse sous 24h · hello@ambree-paris.fr</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a></div><div class="footer-bottom">© 2026 Ambree Paris · hello@ambree-paris.fr · Mentions légales</div></footer>
+</div>
+
+<script>
+  function sendEmail() {
+    const prenom = document.getElementById('contact-prenom').value || '';
+    const email = document.getElementById('contact-email').value || '';
+    const message = document.getElementById('contact-message').value || '';
+    const subject = encodeURIComponent('Message de ' + prenom + ' via ambree-paris.fr');
+    const body = encodeURIComponent('Prénom : ' + prenom + '\nEmail : ' + email + '\n\n' + message);
+    window.location.href = 'mailto:hello@ambree-paris.fr?subject=' + subject + '&body=' + body;
+  }
+
+  function showPage(id) {
+    document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    const btns = document.querySelectorAll('.page-btn');
+    btns.forEach(b => { if (b.textContent.toLowerCase().includes(id.replace('apropos','propos').replace('marque','marque'))) b.classList.add('active'); });
+    window.scrollTo(0, 0);
+  }
+</script>
+
+</body>
+</html>
