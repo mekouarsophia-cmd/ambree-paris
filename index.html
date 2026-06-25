@@ -339,17 +339,25 @@
   /* ======================== */
   /* NUANCIER */
   /* ======================== */
-  .nuancier { display: flex; }
-  .shade {
-    flex: 1;
-    height: 180px;
-    display: flex;
+  .nuancier { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 0 24px 70px; }
+  .shade-card { border-radius: 10px; overflow: hidden; position: relative; height: 240px; }
+  .shade-slide {
+    position: absolute; inset: 0;
+    display: none;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 14px 12px;
+    padding: 16px;
   }
-  .shade-num { font-size: 8px; opacity: 0.5; margin-bottom: 4px; }
-  .shade-name { font-family: 'Cormorant Garamond', serif; font-size: 13px; line-height: 1.2; }
+  .shade-slide.active { display: flex; }
+  .shade-num { font-size: 8px; opacity: 0.6; margin-bottom: 4px; letter-spacing: 1px; }
+  .shade-name { font-family: 'Cormorant Garamond', serif; font-size: 17px; line-height: 1.2; margin-bottom: 8px; }
+  .shade-desc { font-size: 10px; line-height: 1.55; opacity: 0.9; }
+  .shade-photo-label { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.45; text-align: center; }
+  .shade-arrows { position: absolute; top: 50%; left: 0; right: 0; display: flex; justify-content: space-between; padding: 0 8px; transform: translateY(-50%); z-index: 5; }
+  .shade-arrow { width: 24px; height: 24px; background: rgba(255,255,255,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; cursor: pointer; color: #fff; border: none; line-height: 1; }
+  .shade-dots { position: absolute; bottom: 10px; left: 0; right: 0; display: flex; justify-content: center; gap: 5px; z-index: 5; }
+  .shade-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; border: none; padding: 0; }
+  .shade-dot.active { background: #fff; }
 
   /* ======================== */
   /* METHODE STEPS */
@@ -563,7 +571,10 @@
     .blog-scroll { display: grid; grid-template-columns: 1fr 1fr; width: auto; padding-right: 0; }
     .blog-card { width: auto; }
     .editorial-photo { width: 220px; height: 280px; }
-    .nuancier .shade { height: 220px; padding: 20px; }
+    .nuancier { grid-template-columns: repeat(4, 1fr); padding: 0 60px 90px; gap: 16px; }
+    .shade-card { height: 320px; }
+    .shade-name { font-size: 22px; }
+    .shade-desc { font-size: 12px; }
     .shade-name { font-size: 16px; }
     .aa-grid { grid-template-columns: repeat(4, 1fr); }
     .aa-cell { height: 180px; }
@@ -665,18 +676,9 @@
   <section class="section">
     <span class="eyebrow">Ce qu'elles disent</span>
     <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:28px;">Elles ont essayé,<br>elles ont adoré.</h2>
-    <!-- Mobile -->
-    <div class="testi-mobile">
-      <div class="testi"><div class="testi-stars">★★★★★</div><div class="testi-text">"Sophia est super pro, a su m'expliquer tous les produits et adapter la teinte à ma couleur de peau pour un rendu lumineux et ultra bonne mine."</div><div class="testi-author">— Fanny O. · Google</div></div>
-      <div class="testi"><div class="testi-stars">★★★★★</div><div class="testi-text">"Le rendu est ultra naturel, lumineux, exactement ce que je voulais. Je recommande x1000."</div><div class="testi-author">— Sofia H. · Google</div></div>
-    </div>
-    <!-- Desktop grid -->
-    <div class="testi-grid" style="display:none;">
-      <div style="padding:28px; border:1px solid var(--bordeaux-soft); border-radius:10px;"><div class="testi-stars">★★★★★</div><div class="testi-text">"Sophia est super pro, a su m'expliquer tous les produits et adapter la teinte à ma couleur de peau pour un rendu lumineux et ultra bonne mine."</div><div class="testi-author">— Fanny O. · Google</div></div>
-      <div style="padding:28px; border:1px solid var(--bordeaux-soft); border-radius:10px;"><div class="testi-stars">★★★★★</div><div class="testi-text">"Je n'ai eu aucune trace, c'était parfait et ça donne envie d'être bronzée toute l'année."</div><div class="testi-author">— Audrey S. · Google</div></div>
-      <div style="padding:28px; border:1px solid var(--bordeaux-soft); border-radius:10px;"><div class="testi-stars">★★★★★</div><div class="testi-text">"Le rendu est ultra naturel, lumineux, exactement ce que je voulais. Je recommande x1000."</div><div class="testi-author">— Sofia H. · Google</div></div>
-      <div style="padding:28px; border:1px solid var(--bordeaux-soft); border-radius:10px;"><div class="testi-stars">★★★★★</div><div class="testi-text">"Le résultat est superbe et très harmonieux ! Sophia est très professionnelle et met rapidement en confiance."</div><div class="testi-author">— Ingrid M. · Google</div></div>
-    </div>
+    <!-- Elfsight Google Reviews | Ambree Paris -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-5a929939-7ecd-445a-8a70-89c726e4b3b2" data-elfsight-app-lazy></div>
   </section>
 
   <hr class="divider">
@@ -720,7 +722,7 @@
 <!-- PAGE 02 — LA MARQUE -->
 <!-- ======================== -->
 <div id="marque" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
 
   <div class="page-hero">
     <span class="eyebrow-light">La Marque</span>
@@ -775,11 +777,60 @@
     <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:6px;">4 teintes pour chaque carnation</h2>
     <p style="margin-bottom:0;">Choisie selon votre phototype, vos tons et vos sous-tons — jamais au hasard.</p>
   </section>
-  <div class="nuancier">
-    <div class="shade" style="background:#D4A96A; color:#3D0000;"><div class="shade-num">01</div><div class="shade-name">Douceur<br>de Lin</div></div>
-    <div class="shade" style="background:#C4683A; color:#EDE3D3;"><div class="shade-num">02</div><div class="shade-name">Miel<br>Sauvage</div></div>
-    <div class="shade" style="background:#6B7C4E; color:#EDE3D3;"><div class="shade-num">03</div><div class="shade-name">Dune du<br>Sahara</div></div>
-    <div class="shade" style="background:#3D0000; color:#EDE3D3;"><div class="shade-num">04</div><div class="shade-name">Épicé</div></div>
+  <div class="nuancier" id="nuancier-grid">
+
+    <!-- TEINTE 01 -->
+    <div class="shade-card" data-shade="0">
+      <div class="shade-slide active" style="background:#D4A96A; color:#3D0000;" data-slide="0">
+        <div class="shade-num">01</div>
+        <div class="shade-name">Douceur de Lin</div>
+        <div class="shade-desc">Pour celles qui veulent juste une touche d'éclat, comme après un weekend au soleil.</div>
+      </div>
+      <div class="shade-slide" style="background:linear-gradient(135deg,#E8D5B8,#D4B896); color:#3D0000;" data-slide="1"><div class="shade-photo-label">PHOTO<br>AVANT</div></div>
+      <div class="shade-slide" style="background:linear-gradient(135deg,#D4A96A,#B8893E); color:#3D0000;" data-slide="2"><div class="shade-photo-label">PHOTO<br>APRÈS</div></div>
+      <div class="shade-arrows"><button class="shade-arrow" onclick="shadeNav(0,-1)">‹</button><button class="shade-arrow" onclick="shadeNav(0,1)">›</button></div>
+      <div class="shade-dots"><button class="shade-dot active" onclick="shadeGoto(0,0)"></button><button class="shade-dot" onclick="shadeGoto(0,1)"></button><button class="shade-dot" onclick="shadeGoto(0,2)"></button></div>
+    </div>
+
+    <!-- TEINTE 02 -->
+    <div class="shade-card" data-shade="1">
+      <div class="shade-slide active" style="background:#C4683A; color:#EDE3D3;" data-slide="0">
+        <div class="shade-num">02</div>
+        <div class="shade-name">Miel Sauvage</div>
+        <div class="shade-desc">Un doré subtil. Comme un éternel été.</div>
+      </div>
+      <div class="shade-slide" style="background:linear-gradient(135deg,#E8C9A0,#D4A96A); color:#3D0000;" data-slide="1"><div class="shade-photo-label">PHOTO<br>AVANT</div></div>
+      <div class="shade-slide" style="background:linear-gradient(135deg,#C4683A,#8B4A1E); color:#EDE3D3;" data-slide="2"><div class="shade-photo-label">PHOTO<br>APRÈS</div></div>
+      <div class="shade-arrows"><button class="shade-arrow" onclick="shadeNav(1,-1)">‹</button><button class="shade-arrow" onclick="shadeNav(1,1)">›</button></div>
+      <div class="shade-dots"><button class="shade-dot active" onclick="shadeGoto(1,0)"></button><button class="shade-dot" onclick="shadeGoto(1,1)"></button><button class="shade-dot" onclick="shadeGoto(1,2)"></button></div>
+    </div>
+
+    <!-- TEINTE 03 -->
+    <div class="shade-card" data-shade="2">
+      <div class="shade-slide active" style="background:#6B7C4E; color:#EDE3D3;" data-slide="0">
+        <div class="shade-num">03</div>
+        <div class="shade-name">Dune du Sahara</div>
+        <div class="shade-desc">Plus intense, plus chaud. Pour celles qui veulent vraiment qu'on le voit.</div>
+      </div>
+      <div class="shade-slide" style="background:linear-gradient(135deg,#D4B896,#C4A070); color:#3D0000;" data-slide="1"><div class="shade-photo-label">PHOTO<br>AVANT</div></div>
+      <div class="shade-slide" style="background:linear-gradient(135deg,#8B5E3C,#6B3A1E); color:#EDE3D3;" data-slide="2"><div class="shade-photo-label">PHOTO<br>APRÈS</div></div>
+      <div class="shade-arrows"><button class="shade-arrow" onclick="shadeNav(2,-1)">‹</button><button class="shade-arrow" onclick="shadeNav(2,1)">›</button></div>
+      <div class="shade-dots"><button class="shade-dot active" onclick="shadeGoto(2,0)"></button><button class="shade-dot" onclick="shadeGoto(2,1)"></button><button class="shade-dot" onclick="shadeGoto(2,2)"></button></div>
+    </div>
+
+    <!-- TEINTE 04 -->
+    <div class="shade-card" data-shade="3">
+      <div class="shade-slide active" style="background:#3D0000; color:#EDE3D3;" data-slide="0">
+        <div class="shade-num">04</div>
+        <div class="shade-name">Épicé</div>
+        <div class="shade-desc">La teinte la plus profonde, pour sublimer les carnations naturellement dorées.</div>
+      </div>
+      <div class="shade-slide" style="background:linear-gradient(135deg,#C4A070,#8B5E3C); color:#3D0000;" data-slide="1"><div class="shade-photo-label">PHOTO<br>AVANT</div></div>
+      <div class="shade-slide" style="background:linear-gradient(135deg,#3D0000,#1A0000); color:#EDE3D3;" data-slide="2"><div class="shade-photo-label">PHOTO<br>APRÈS</div></div>
+      <div class="shade-arrows"><button class="shade-arrow" onclick="shadeNav(3,-1)">‹</button><button class="shade-arrow" onclick="shadeNav(3,1)">›</button></div>
+      <div class="shade-dots"><button class="shade-dot active" onclick="shadeGoto(3,0)"></button><button class="shade-dot" onclick="shadeGoto(3,1)"></button><button class="shade-dot" onclick="shadeGoto(3,2)"></button></div>
+    </div>
+
   </div>
 
   <!-- PRODUITS -->
@@ -804,7 +855,7 @@
 <!-- PAGE 03 — PRESTATIONS -->
 <!-- ======================== -->
 <div id="prestations" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
 
   <div class="page-hero">
     <span class="eyebrow-light">Prestations</span>
@@ -937,7 +988,7 @@
 <!-- PAGE 04 — BLOG -->
 <!-- ======================== -->
 <div id="blog" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
 
   <div class="page-hero">
     <span class="eyebrow-light">Le Blog</span>
@@ -1001,7 +1052,7 @@
 <!-- PAGE 05 — À PROPOS -->
 <!-- ======================== -->
 <div id="apropos" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
 
   <div class="page-hero">
     <span class="eyebrow-light">À Propos</span>
@@ -1055,7 +1106,7 @@
 <!-- PAGE 06 — CONTACT -->
 <!-- ======================== -->
 <div id="contact" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
 
   <div class="page-hero">
     <span class="eyebrow-light">Contact</span>
@@ -1134,6 +1185,21 @@
       'Message :\n' + message
     );
     window.location.href = 'mailto:hello@ambree-paris.fr?subject=' + subject + '&body=' + body;
+  }
+
+  const shadeState = {0:0, 1:0, 2:0, 3:0};
+  function shadeNav(shadeIdx, dir) {
+    let cur = shadeState[shadeIdx];
+    cur = (cur + dir + 3) % 3;
+    shadeGoto(shadeIdx, cur);
+  }
+  function shadeGoto(shadeIdx, slideIdx) {
+    shadeState[shadeIdx] = slideIdx;
+    const card = document.querySelector(`.shade-card[data-shade="${shadeIdx}"]`);
+    if (!card) return;
+    card.querySelectorAll('.shade-slide').forEach(s => s.classList.remove('active'));
+    card.querySelector(`.shade-slide[data-slide="${slideIdx}"]`).classList.add('active');
+    card.querySelectorAll('.shade-dot').forEach((d,i) => d.classList.toggle('active', i === slideIdx));
   }
 
   function showPage(id) {
