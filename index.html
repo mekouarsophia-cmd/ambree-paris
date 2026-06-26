@@ -166,6 +166,131 @@
   .nav-links a { text-decoration: none; color: inherit; transition: opacity 0.2s; }
   .nav-links a:hover { opacity: 1; }
 
+  /* ======================== */
+  /* MOBILE HAMBURGER MENU */
+  /* ======================== */
+  .hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .hamburger-btn span {
+    display: block;
+    height: 1.5px;
+    width: 100%;
+    background: var(--bordeaux);
+    border-radius: 2px;
+    transition: 0.2s;
+  }
+  .hamburger-btn span:nth-child(2) { width: 70%; }
+
+  .mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--lin);
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+  }
+  .mobile-overlay.open { display: flex; }
+
+  .mobile-overlay-header {
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--bordeaux-soft);
+  }
+  .mobile-overlay-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--bordeaux);
+    letter-spacing: 4px;
+  }
+  .mobile-close-btn {
+    width: 22px;
+    height: 22px;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .mobile-close-btn::before,
+  .mobile-close-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: var(--bordeaux);
+  }
+  .mobile-close-btn::before { transform: rotate(45deg); }
+  .mobile-close-btn::after { transform: rotate(-45deg); }
+
+  .mobile-overlay-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 32px;
+    gap: 24px;
+  }
+  .mobile-overlay-links a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: var(--bordeaux);
+    opacity: 0.75;
+    text-decoration: none;
+    position: relative;
+    width: fit-content;
+  }
+  .mobile-overlay-links a.active { opacity: 1; }
+  .mobile-overlay-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; left: 0;
+    width: 24px; height: 1px;
+    background: var(--terra);
+  }
+
+  .mobile-overlay-footer {
+    padding: 24px 32px 36px;
+    border-top: 1px solid var(--bordeaux-soft);
+  }
+  .mobile-overlay-lang {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--bordeaux);
+    opacity: 0.5;
+  }
+  .mobile-overlay-cta {
+    display: block;
+    text-align: center;
+    padding: 13px;
+    background: var(--terra);
+    border-radius: 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--lin);
+    text-decoration: none;
+  }
+
+  @media (min-width: 1024px) {
+    .hamburger-btn { display: none; }
+  }
+
+
   .nav-right {
     display: flex;
     align-items: center;
@@ -627,6 +752,7 @@
     <div class="nav-right">
       <div class="nav-lang">FR | EN</div>
       <a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a>
+      <button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
@@ -735,7 +861,7 @@
 <!-- PAGE 02 — LA MARQUE -->
 <!-- ======================== -->
 <div id="marque" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a><button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button></div></nav>
 
   <div class="page-hero">
     <span class="eyebrow-light">La Marque</span>
@@ -868,7 +994,7 @@
 <!-- PAGE 03 — PRESTATIONS -->
 <!-- ======================== -->
 <div id="prestations" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a><button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button></div></nav>
 
   <div class="page-hero">
     <span class="eyebrow-light">Prestations</span>
@@ -1020,7 +1146,7 @@
 <!-- PAGE 04 — BLOG -->
 <!-- ======================== -->
 <div id="blog" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a><button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button></div></nav>
 
   <div class="page-hero">
     <span class="eyebrow-light">Le Blog</span>
@@ -1072,7 +1198,7 @@
 <!-- PAGE 05 — À PROPOS -->
 <!-- ======================== -->
 <div id="apropos" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a><button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button></div></nav>
 
   <div class="page-hero">
     <span class="eyebrow-light">À Propos</span>
@@ -1127,7 +1253,7 @@
 <!-- PAGE 06 — CONTACT -->
 <!-- ======================== -->
 <div id="contact" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a><button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button></div></nav>
 
   <div class="page-hero">
     <span class="eyebrow-light">Contact</span>
@@ -1174,7 +1300,7 @@
 <!-- ARTICLE 1 — CAPITAL SOLEIL -->
 <!-- ======================== -->
 <div id="article-soleil" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="https://calendly.com/hello-ambree-paris/spray-tan-studio-paris-9e" target="_blank" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="https://calendly.com/hello-ambree-paris/spray-tan-studio-paris-9e" target="_blank" class="btn btn-terra nav-cta">Prendre rendez-vous</a><button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button></div></nav>
 
   <div class="page-hero">
     <span class="eyebrow-light">Le Journal Beauté by Ambree</span>
@@ -1219,7 +1345,7 @@
 <!-- ARTICLE 2 — PREMIER SPRAY TAN -->
 <!-- ======================== -->
 <div id="article-spraytan" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="https://calendly.com/hello-ambree-paris/spray-tan-studio-paris-9e" target="_blank" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="https://calendly.com/hello-ambree-paris/spray-tan-studio-paris-9e" target="_blank" class="btn btn-terra nav-cta">Prendre rendez-vous</a><button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button></div></nav>
 
   <div class="page-hero">
     <span class="eyebrow-light">Spray Tan</span>
@@ -1304,6 +1430,28 @@
   <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a></div><div class="footer-bottom">© 2026 Ambree Paris · hello@ambree-paris.fr · Mentions légales</div></footer>
 </div>
 
+<!-- ======================== -->
+<!-- MOBILE MENU OVERLAY -->
+<!-- ======================== -->
+<div class="mobile-overlay" id="mobile-overlay">
+  <div class="mobile-overlay-header">
+    <div class="mobile-overlay-logo">ambree</div>
+    <button class="mobile-close-btn" onclick="closeMobileMenu()"></button>
+  </div>
+  <div class="mobile-overlay-links">
+    <a href="#" onclick="navigateMobile('accueil')">Accueil</a>
+    <a href="#" onclick="navigateMobile('marque')">La Marque</a>
+    <a href="#" onclick="navigateMobile('prestations')">Prestations</a>
+    <a href="#" onclick="navigateMobile('blog')">Blog</a>
+    <a href="#" onclick="navigateMobile('apropos')">À Propos</a>
+    <a href="#" onclick="navigateMobile('contact')">Contact</a>
+  </div>
+  <div class="mobile-overlay-footer">
+    <div class="mobile-overlay-lang">FR&nbsp;&nbsp;|&nbsp;&nbsp;EN</div>
+    <a href="https://calendly.com/hello-ambree-paris/spray-tan-studio-paris-9e" target="_blank" class="mobile-overlay-cta">Prendre rendez-vous</a>
+  </div>
+</div>
+
 <script>
   function sendEmail() {
     const prenom = document.getElementById('contact-prenom').value || '';
@@ -1368,6 +1516,34 @@
     document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
     document.getElementById(id).classList.add('active');
     window.scrollTo(0, 0);
+  }
+
+  function openMobileMenu() {
+    document.getElementById('mobile-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    updateMobileActiveLink();
+  }
+
+  function closeMobileMenu() {
+    document.getElementById('mobile-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function navigateMobile(id) {
+    showPage(id);
+    closeMobileMenu();
+  }
+
+  function updateMobileActiveLink() {
+    const activePage = document.querySelector('.page-content.active');
+    if (!activePage) return;
+    const activeId = activePage.id;
+    document.querySelectorAll('.mobile-overlay-links a').forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('onclick') && a.getAttribute('onclick').includes(`'${activeId}'`)) {
+        a.classList.add('active');
+      }
+    });
   }
 </script>
 
