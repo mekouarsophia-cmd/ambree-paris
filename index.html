@@ -333,6 +333,7 @@
 
   .blog-card-body { padding: 18px; }
   .blog-card-cat { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--terra); margin-bottom: 6px; }
+  .blog-card-author { font-size: 8px; color: var(--bordeaux); opacity: 0.35; letter-spacing: 1px; margin-top: 6px; margin-bottom: 10px; }
   .blog-card-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--bordeaux); line-height: 1.3; margin-bottom: 10px; opacity: 1; }
   .blog-card-link { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--bordeaux); opacity: 0.4; text-decoration: none; }
 
@@ -385,7 +386,7 @@
   /* ======================== */
   /* CONTACT */
   /* ======================== */
-  .con-row { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--bordeaux-soft); align-items: flex-start; }
+  .con-row { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--bordeaux-soft); align-items: flex-start; min-height: 68px; box-sizing: border-box; }
   .con-row:last-child { border-bottom: none; }
   .con-icon { font-size: 16px; width: 28px; flex-shrink: 0; padding-top: 2px; }
   .con-label { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--terra); margin-bottom: 3px; }
@@ -537,6 +538,18 @@
   .page-content.active { display: block; }
 
   /* ======================== */
+  /* ARTICLE CONTENT */
+  /* ======================== */
+  .article-body { padding: 50px 24px; max-width: 720px; margin: 0 auto; }
+  .article-meta { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--terra); margin-bottom: 16px; }
+  .article-h2 { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--bordeaux); font-weight: 400; margin: 36px 0 14px; }
+  .article-p { font-size: 13px; color: var(--bordeaux); opacity: 0.7; line-height: 1.9; margin-bottom: 16px; }
+  .article-list { margin: 0 0 16px 0; padding-left: 20px; }
+  .article-list li { font-size: 13px; color: var(--bordeaux); opacity: 0.7; line-height: 1.8; margin-bottom: 6px; }
+  .article-ps { font-style: italic; font-size: 12px; color: var(--bordeaux); opacity: 0.6; line-height: 1.8; padding: 18px 20px; background: rgba(196,104,58,0.06); border-left: 2px solid var(--terra); border-radius: 0 6px 6px 0; margin-top: 24px; }
+  .article-back { display: inline-block; margin-top: 30px; }
+
+  /* ======================== */
   /* RESPONSIVE — TABLET+ */
   /* ======================== */
   @media (min-width: 640px) {
@@ -648,6 +661,7 @@
     </div>
 
     <div id="home-tab-studio" class="tab-panel tab-panel-active">
+      <div style="font-size:9px; letter-spacing:2px; text-transform:uppercase; color:var(--terra); margin-bottom:16px;">✦ Uniquement sur rendez-vous</div>
       <div class="service-row"><div><div class="service-name">Corps entier & Visage</div><div class="service-name-en">Full Body & Face</div></div><div class="service-price">50€</div></div>
       <div class="service-row"><div><div class="service-name">Corps entier</div><div class="service-name-en">Full Body</div></div><div class="service-price">40€</div></div>
       <div class="service-row"><div><div class="service-name">Haut du corps</div><div class="service-name-en">Upper Body</div></div><div class="service-price">35€</div></div>
@@ -674,8 +688,7 @@
 
   <!-- TEMOIGNAGES -->
   <section class="section">
-    <span class="eyebrow">Ce qu'elles disent</span>
-    <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:28px;">Elles ont essayé,<br>elles ont adoré.</h2>
+    <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:28px;">Avis clients</h2>
     <!-- Elfsight Google Reviews | Ambree Paris -->
     <script src="https://elfsightcdn.com/platform.js" async></script>
     <div class="elfsight-app-5a929939-7ecd-445a-8a70-89c726e4b3b2" data-elfsight-app-lazy></div>
@@ -691,8 +704,8 @@
     </div>
     <div class="blog-scroll-wrap">
       <div class="blog-scroll">
-        <div class="blog-card"><div class="blog-card-img" style="background:linear-gradient(135deg,#8B5E3C,#C4683A);">photo</div><div class="blog-card-body"><div class="blog-card-cat">Éducation peau</div><div class="blog-card-title">The Silent Damage: What No One Tells You About Sun Exposure</div><a href="#" class="blog-card-link">Lire l'article →</a></div></div>
-        <div class="blog-card"><div class="blog-card-img" style="background:linear-gradient(135deg,#6B7C4E,#3D0000);">photo</div><div class="blog-card-body"><div class="blog-card-cat">Spray Tan</div><div class="blog-card-title">Getting a Spray Tan for the First Time — A Complete Guide</div><a href="#" class="blog-card-link">Lire l'article →</a></div></div>
+        <div class="blog-card"><div class="blog-card-img" style="background:linear-gradient(135deg,#8B5E3C,#C4683A);">photo</div><div class="blog-card-body"><div class="blog-card-cat">Le Journal Beauté by Ambree</div><div class="blog-card-title">Capital soleil : ce qu'on ne nous dit pas assez tôt</div><div class="blog-card-author">Par Sophia</div><a href="#" class="blog-card-link" onclick="showPage('article-soleil'); return false;">Lire l'article →</a></div></div>
+        <div class="blog-card"><div class="blog-card-img" style="background:linear-gradient(135deg,#6B7C4E,#3D0000);">photo</div><div class="blog-card-body"><div class="blog-card-cat">Spray Tan</div><div class="blog-card-title">Votre premier spray tan : tout ce qu'il faut savoir</div><div class="blog-card-author">Par Sophia</div><a href="#" class="blog-card-link" onclick="showPage('article-spraytan'); return false;">Lire l'article →</a></div></div>
       </div>
     </div>
     <p style="font-size:8px; opacity:0.3; margin-top:10px; letter-spacing:1px;" class="mobile-only">← Glisser pour voir plus</p>
@@ -874,6 +887,7 @@
 
     <!-- TAB STUDIO -->
     <div id="tab-studio" class="tab-panel tab-panel-active">
+      <div style="font-size:9px; letter-spacing:2px; text-transform:uppercase; color:var(--terra); margin-bottom:16px;">✦ Uniquement sur rendez-vous</div>
       <div class="service-row"><div><div class="service-name">Corps entier & Visage</div><div class="service-name-en">Full Body & Face</div></div><div class="service-price">50€</div></div>
       <div class="service-row"><div><div class="service-name">Corps entier</div><div class="service-name-en">Full Body</div></div><div class="service-price">40€</div></div>
       <div class="service-row"><div><div class="service-name">Haut du corps</div><div class="service-name-en">Upper Body</div></div><div class="service-price">35€</div></div>
@@ -903,28 +917,28 @@
       <!-- FORMULAIRE DOMICILE -->
       <div style="margin-top:30px;">
         <div class="form-field"><label class="form-label">Votre nom</label><input type="text" id="dom-nom" class="form-input" placeholder="Marie Dupont"></div>
+        <div class="form-field"><label class="form-label">Votre email</label><input type="email" id="dom-email" class="form-input" placeholder="marie@email.com"></div>
+        <div class="form-field"><label class="form-label">Votre téléphone</label><input type="tel" id="dom-tel" class="form-input" placeholder="06 12 34 56 78"></div>
         <div class="form-field"><label class="form-label">Votre adresse</label><input type="text" id="dom-adresse" class="form-input" placeholder="12 rue de Paris, 75010 Paris"></div>
-        <div class="grid-2" style="gap:14px;">
-          <div class="form-field"><label class="form-label">Date souhaitée</label><input type="date" id="dom-date" class="form-input"></div>
-          <div class="form-field"><label class="form-label">Heure souhaitée</label>
-            <select id="dom-heure" class="form-input">
-              <option value="">Sélectionner…</option>
-              <option>09:00</option>
-              <option>10:00</option>
-              <option>11:00</option>
-              <option>12:00</option>
-              <option>13:00</option>
-              <option>14:00</option>
-              <option>15:00</option>
-              <option>16:00</option>
-              <option>17:00</option>
-              <option>18:00</option>
-              <option>19:00</option>
-              <option>20:00</option>
-              <option>21:00 — supplément soirée</option>
-              <option>22:00 — supplément soirée</option>
-            </select>
-          </div>
+        <div class="form-field"><label class="form-label">Date souhaitée</label><input type="date" id="dom-date" class="form-input"></div>
+        <div class="form-field"><label class="form-label">Heure souhaitée</label>
+          <select id="dom-heure" class="form-input">
+            <option value="">Sélectionner…</option>
+            <option>10:00</option>
+            <option>11:00</option>
+            <option>12:00</option>
+            <option>13:00</option>
+            <option>14:00</option>
+            <option>15:00</option>
+            <option>16:00</option>
+            <option>17:00</option>
+            <option>18:00</option>
+            <option>19:00</option>
+            <option>20:00</option>
+            <option>21:00 (+supplément)</option>
+            <option>22:00 (+supplément)</option>
+            <option>23:00 (+supplément)</option>
+          </select>
         </div>
         <div class="form-field"><label class="form-label">Type de prestation</label>
           <select id="dom-prestation" class="form-input">
@@ -935,7 +949,25 @@
             <option>Visage & Décolleté</option>
           </select>
         </div>
-        <div class="form-field"><label class="form-label">Votre type de peau</label><input type="text" id="dom-peau" class="form-input" placeholder="Claire, mate, foncée…"></div>
+        <div class="form-field"><label class="form-label">Votre type de peau</label>
+          <select id="dom-peau" class="form-input">
+            <option value="">Sélectionner…</option>
+            <option>Phototype I — Peau très claire, brûle systématiquement, ne bronze jamais (peau laiteuse, taches de rousseur fréquentes)</option>
+            <option>Phototype II — Peau claire, brûle facilement, bronze très peu et difficilement</option>
+            <option>Phototype III — Peau claire à intermédiaire, brûle parfois, bronze progressivement</option>
+            <option>Phototype IV — Peau mate, brûle rarement, bronze facilement et rapidement</option>
+            <option>Phototype V — Peau foncée, brûle très rarement, bronze toujours intensément</option>
+            <option>Phototype VI — Peau noire, ne brûle jamais</option>
+            <option>Je ne sais pas — j'en discuterai avec vous le jour J</option>
+          </select>
+        </div>
+        <div class="form-field"><label class="form-label">Avez-vous déjà fait un spray tan ?</label>
+          <select id="dom-experience" class="form-input">
+            <option value="">Sélectionner…</option>
+            <option>Oui</option>
+            <option>Non, c'est ma première fois</option>
+          </select>
+        </div>
         <div class="form-field"><label class="form-label">Message — résultat souhaité, précisions</label><textarea id="dom-message" class="form-input form-textarea" placeholder="Bonjour Sophia, je souhaiterais…"></textarea></div>
         <a href="#" class="btn btn-terra btn-block" onclick="sendDomicileEmail(); return false;">Envoyer ma demande</a>
         <div class="form-note">Réponse sous 24h · hello@ambree-paris.fr</div>
@@ -969,7 +1001,7 @@
         <div class="con-row"><div class="con-icon">🏠</div><div><div class="con-label">À domicile</div><div class="con-value">Sur demande</div><div class="con-note">Certains arrondissements</div></div></div>
       </div>
       <div>
-        <div class="con-row"><div class="con-icon">⏱</div><div><div class="con-label">Durée</div><div class="con-value">10 à 30 minutes</div></div></div>
+        <div class="con-row"><div class="con-icon">⏱</div><div><div class="con-label">Durée</div><div class="con-value">10 à 40 minutes selon la prestation</div></div></div>
         <div class="con-row"><div class="con-icon">💳</div><div><div class="con-label">Paiement</div><div class="con-value">Wero · Espèces</div></div></div>
       </div>
     </div>
@@ -993,16 +1025,14 @@
   <div class="page-hero">
     <span class="eyebrow-light">Le Blog</span>
     <h1 class="page-hero-title">Peau, soleil<br><em>& beauté.</em></h1>
-    <p style="color:var(--lin); opacity:0.5; margin-top:14px;">Conseils, éducation peau et coulisses d'Ambree — par Sophia.</p>
+    <p style="color:var(--lin); opacity:0.5; margin-top:14px;">Conseils, éducation peau et coulisses d'Ambree.</p>
   </div>
 
   <section class="section">
     <div class="filters">
       <div class="filter-active">Tous</div>
-      <div class="filter-inactive">Éducation peau</div>
       <div class="filter-inactive">Spray Tan</div>
-      <div class="filter-inactive">Skincare</div>
-      <div class="filter-inactive">Ambree</div>
+      <div class="filter-inactive">Le Journal Beauté by Ambree</div>
     </div>
 
     <div class="grid-2" style="gap:30px; align-items:start;">
@@ -1012,36 +1042,26 @@
         <div class="blog-card" style="width:100%;">
           <div class="blog-card-img" style="background:linear-gradient(135deg,#8B5E3C,#C4683A); height:200px;">photo article</div>
           <div class="blog-card-body" style="padding:22px;">
-            <div class="blog-card-cat">Éducation peau</div>
-            <div class="blog-card-title" style="font-size:20px; margin-bottom:10px;">The Silent Damage: What No One Tells You About Sun Exposure</div>
+            <div class="blog-card-cat">Le Journal Beauté by Ambree</div>
+            <div class="blog-card-title" style="font-size:20px; margin-bottom:4px;">Capital soleil : ce qu'on ne nous dit pas assez tôt</div>
+            <div class="blog-card-author">Par Sophia</div>
             <p style="font-size:11px; margin-bottom:14px;">On nous répète depuis toujours de mettre de la crème solaire. Mais ce qu'on nous dit rarement…</p>
-            <a href="#" class="link-under">Lire l'article →</a>
+            <a href="#" class="link-under" onclick="showPage('article-soleil'); return false;">Lire l'article →</a>
           </div>
         </div>
       </div>
       <!-- Liste -->
       <div>
         <span class="eyebrow">Tous les articles</span>
-        <div style="display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--bordeaux-soft); align-items:flex-start;">
+        <div style="display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--bordeaux-soft); align-items:flex-start; cursor:pointer;" onclick="showPage('article-spraytan')">
           <div style="width:80px; height:80px; border-radius:6px; background:linear-gradient(135deg,#6B7C4E,#3D2010); flex-shrink:0;"></div>
-          <div><div class="blog-card-cat">Spray Tan</div><div class="blog-card-title" style="font-size:16px; margin-bottom:4px;">Getting a Spray Tan for the First Time</div><div style="font-size:8px; color:var(--bordeaux); opacity:0.3; letter-spacing:1px;">Juin 2026</div></div>
+          <div><div class="blog-card-cat">Spray Tan</div><div class="blog-card-title" style="font-size:16px; margin-bottom:4px;">Votre premier spray tan : tout ce qu'il faut savoir</div><div style="font-size:8px; color:var(--bordeaux); opacity:0.3; letter-spacing:1px;">Par Sophia · Juin 2026</div></div>
         </div>
         <div style="display:flex; gap:14px; padding:16px 0; align-items:flex-start; opacity:0.35;">
           <div style="width:80px; height:80px; border-radius:6px; background:rgba(61,0,0,0.08); border:1px dashed rgba(61,0,0,0.15); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:8px; color:var(--bordeaux);">bientôt</div>
-          <div><div class="blog-card-cat">Skincare</div><div class="blog-card-title" style="font-size:16px; margin-bottom:4px;">Prochain article — bientôt disponible</div><div style="font-size:8px; color:var(--bordeaux); opacity:0.3; letter-spacing:1px;">À venir</div></div>
+          <div><div class="blog-card-cat">Le Journal Beauté by Ambree</div><div class="blog-card-title" style="font-size:16px; margin-bottom:4px;">Prochain article — bientôt disponible</div><div style="font-size:8px; color:var(--bordeaux); opacity:0.3; letter-spacing:1px;">À venir</div></div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER -->
-  <section class="section-bord" style="text-align:center;">
-    <span class="eyebrow-light">Restez informée</span>
-    <h2 style="font-size:clamp(26px,4vw,38px); font-style:italic; color:var(--lin); margin-bottom:12px; font-weight:300;">Ne manquez aucun article</h2>
-    <p style="color:var(--lin); opacity:0.55; margin-bottom:22px; max-width:460px; margin-left:auto; margin-right:auto;">Conseils peau et nouveautés directement dans votre boîte mail.</p>
-    <div style="max-width:420px; margin:0 auto;">
-      <input type="email" class="newsletter-input" placeholder="Votre adresse email">
-      <a href="#" class="btn btn-terra btn-block">S'inscrire</a>
     </div>
   </section>
 
@@ -1067,30 +1087,31 @@
         <span class="eyebrow">Fondatrice</span>
         <h2 style="font-size:clamp(24px,4vw,34px); margin-bottom:4px;">Sophia</h2>
         <div style="font-size:8px; letter-spacing:2px; text-transform:uppercase; color:var(--bordeaux); opacity:0.35; margin-bottom:14px;">Spray Tan Artist · Paris</div>
-        <p>J'ai 34 ans, et je viens tout juste de me lancer dans l'entrepreneuriat. Après six ans dans les achats industriels, j'ai décidé de sauter le pas.</p>
+        <p>Bonjour, je m'appelle Sophia, j'ai 34 ans, et je viens tout juste de me lancer dans l'entrepreneuriat.</p>
       </div>
     </div>
-    <p>Une passion de toujours — j'adore la skincare, découvrir de nouveaux produits et comprendre ce qu'ils font vraiment à la peau.</p>
+    <p>Après de longues années passées dans les achats industriels, j'ai enfin décidé de sauter le pas et de poursuivre mon rêve : lancer mon propre projet dans l'univers de la beauté. Une passion de toujours — j'adore la skincare, découvrir de nouveaux produits et comprendre ce qu'ils font vraiment à la peau.</p>
+    <p>Pendant des années, je me suis demandé comment lancer un projet à moi en parallèle de mon travail. Sans jamais y arriver. Et puis en 2025, quelque chose a changé. Je me suis dit : c'est maintenant.</p>
+    <p>Je ne savais pas trop par où commencer. J'ai multiplié les sessions de brainstorming, les rendez-vous avec des amis entrepreneurs… mais je tournais en rond. Jusqu'au jour où je me suis posée, seule, pour réfléchir à ce que je voulais vraiment créer.</p>
+    <p>Et là, une évidence est remontée.</p>
   </section>
 
   <hr class="divider">
 
   <!-- HISTOIRE -->
   <section class="section">
-    <div class="grid-2" style="gap:50px;">
-      <div>
-        <span class="eyebrow">L'origine d'Ambree</span>
-        <h2 style="font-size:clamp(24px,4vw,34px); font-style:italic; margin-bottom:16px;">"Née d'une évidence."</h2>
-        <p>Depuis mes 16 ans, il y a une chose que je redoutais : les journées à la plage. J'ai une peau de type I — très claire, qui brûle systématiquement au soleil. Pendant que les autres bronzaient, j'étais sous le parasol.</p>
-      </div>
-      <div style="padding-top:0;">
-        <p style="margin-bottom:20px;">Au fil de mes recherches, j'ai compris que ce besoin n'était pas que le mien. C'est de là qu'est née Ambree.</p>
-        <div style="border-left:2px solid var(--terra); padding-left:16px; margin-bottom:20px;">
-          <p style="font-family:'Cormorant Garamond',serif; font-size:18px; font-style:italic; opacity:1; color:var(--bordeaux);">"Toutes les peaux méritent un bronzage lumineux, naturel et pensé pour elles."</p>
-        </div>
-        <a href="#" class="link-under" onclick="showPage('marque')">Découvrir l'univers Ambree →</a>
-      </div>
+    <span class="eyebrow">L'origine d'Ambree</span>
+    <h2 style="font-size:clamp(24px,4vw,34px); font-style:italic; margin-bottom:16px;">"Née d'une évidence."</h2>
+    <p>Depuis mes 16 ans, il y a une chose que je redoutais : les journées à la plage. Pourquoi ? Parce que j'ai une peau de type I — très claire, qui brûle systématiquement au soleil. Pendant que les autres bronzaient, j'étais sous le parasol, couverte de crème solaire. Et malgré tout, je brûlais quand même.</p>
+    <p>Mon rêve : avoir cette peau dorée, ce glow de fin de journée au soleil.</p>
+    <p>Avec le temps, j'ai trouvé des stratégies — mais jamais parfaites. Traces de maillot, crème 50 à réappliquer sans cesse, ballet millimétré entre parasol et soleil pour ne pas brûler… Une vraie chorégraphie, qui finissait par marcher, mais toujours au détriment de ma peau.</p>
+    <p>Car ce qu'on ne nous dit pas assez jeunes, c'est que le soleil, au-delà des coups de soleil, abîme profondément la peau lors d'expositions fortes ou prolongées. On parle souvent de "capital soleil" : cette idée que notre peau ne peut encaisser qu'une certaine dose d'UV au cours d'une vie, sans pouvoir la renouveler. Les peaux claires comme la mienne en ont d'ailleurs encore moins que les autres.</p>
+    <p>Au fil de mes recherches, j'ai compris qu'au fond, ce besoin n'était pas que le mien. Qu'on ait la peau très claire, mate ou foncée, nous cherchons toutes la même chose : un teint lumineux et uniforme, qui sublime notre carnation sans l'agresser. Et c'est exactement ce que je voulais créer — un bronzage pensé pour chaque peau, selon ses tons et ses sous-tons.</p>
+    <p>C'est de là qu'est née Ambree. D'une passion pour la beauté et la peau, et d'une envie de résoudre ce problème avec des produits sains et un résultat naturel.</p>
+    <div style="border-left:2px solid var(--terra); padding-left:16px; margin:24px 0;">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:18px; font-style:italic; opacity:1; color:var(--bordeaux); margin:0;">"Toutes les peaux méritent un bronzage lumineux, naturel et pensé pour elles."</p>
     </div>
+    <a href="#" class="link-under" onclick="showPage('marque')">Découvrir l'univers Ambree →</a>
   </section>
 
   <section class="section-terra" style="text-align:center;">
@@ -1121,19 +1142,20 @@
         <span class="eyebrow">Nous trouver</span>
         <h2 style="font-size:clamp(24px,3.5vw,32px); margin-bottom:22px;">Infos pratiques</h2>
         <div class="con-row"><div class="con-icon">✉</div><div><div class="con-label">Email</div><div class="con-value">hello@ambree-paris.fr</div></div></div>
-        <div class="con-row"><div class="con-icon">📍</div><div><div class="con-label">Studio</div><div class="con-value">Oui Beauty · Paris 9e</div><div class="con-note">2 rue de Provence, 75009 Paris</div></div></div>
-        <div class="con-row"><div class="con-icon">🏠</div><div><div class="con-label">À domicile</div><div class="con-value">Sur demande</div><div class="con-note">Certains arrondissements · Les demandes de réservation à domicile sont à effectuer via le formulaire ci-dessous.</div></div></div>
+        <div class="con-row"><div class="con-icon">📍</div><div><div class="con-label">Studio</div><div class="con-value">Oui Beauty · Paris 9e</div><div class="con-note">2 rue de Provence, 75009 Paris · Uniquement sur rendez-vous</div></div></div>
+        <div class="con-row"><div class="con-icon">🏠</div><div><div class="con-label">À domicile</div><div class="con-value">Sur demande</div><div class="con-note">Voir les détails et faire votre demande via le formulaire dédié.</div><a href="#" class="btn btn-out" style="margin-top:10px; display:inline-block;" onclick="showPage('prestations')">Voir le formulaire à domicile →</a></div></div>
         <div style="margin-top:30px;">
           <span class="eyebrow">Suivez-nous</span>
-          <div style="font-family:'Cormorant Garamond',serif; font-size:22px; color:var(--bordeaux); margin-bottom:6px;">@ambree.paris</div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:22px; color:var(--bordeaux); margin-bottom:6px;">@ambree_paris</div>
           <div style="font-size:9px; color:var(--bordeaux); opacity:0.35; margin-bottom:14px; letter-spacing:1px;">Spray tan, conseils peau & coulisses</div>
-          <a href="#" class="btn btn-out">Voir sur Instagram →</a>
+          <a href="https://www.instagram.com/ambree_paris" target="_blank" class="btn btn-out">Voir sur Instagram →</a>
         </div>
       </div>
       <!-- Formulaire -->
       <div>
         <span class="eyebrow">Nous écrire</span>
-        <h2 style="font-size:clamp(24px,3.5vw,32px); margin-bottom:22px;">Envoyez-nous<br>un message</h2>
+        <h2 style="font-size:clamp(24px,3.5vw,32px); margin-bottom:10px;">Envoyez-nous<br>un message</h2>
+        <p style="font-size:11px; margin-bottom:22px;">Partenariats, collaborations, présence à un événement, devis de déplacement ou toute autre demande spécifique — ce formulaire est fait pour vous.</p>
         <div class="grid-2" style="gap:12px;">
           <div class="form-field"><label class="form-label">Prénom</label><input type="text" id="contact-prenom" class="form-input" placeholder="Marie"></div>
           <div class="form-field"><label class="form-label">Email</label><input type="email" id="contact-email" class="form-input" placeholder="marie@email.com"></div>
@@ -1144,6 +1166,140 @@
       </div>
     </div>
   </section>
+
+  <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a></div><div class="footer-bottom">© 2026 Ambree Paris · hello@ambree-paris.fr · Mentions légales</div></footer>
+</div>
+
+<!-- ======================== -->
+<!-- ARTICLE 1 — CAPITAL SOLEIL -->
+<!-- ======================== -->
+<div id="article-soleil" class="page-content">
+  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="https://calendly.com/hello-ambree-paris/spray-tan-studio-paris-9e" target="_blank" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+
+  <div class="page-hero">
+    <span class="eyebrow-light">Le Journal Beauté by Ambree</span>
+    <h1 class="page-hero-title" style="font-size:clamp(36px,6vw,56px);">Capital soleil :<br><em>ce qu'on ne nous dit pas assez tôt</em></h1>
+  </div>
+
+  <div class="article-body">
+    <div class="article-meta">Par Sophia · Juin 2026</div>
+
+    <p class="article-p">On nous l'a tous dit, depuis qu'on est petits : mets de la crème solaire. Pour ne pas brûler, pour ne pas rentrer rouge de la plage. C'est un réflexe qu'on intègre — sans forcément comprendre pourquoi, ni ce qu'on évite vraiment.</p>
+
+    <p class="article-p">Parce que les coups de soleil, c'est visible. Ce qui l'est moins, ce sont tous les autres effets d'une exposition prolongée aux UV — ceux qui s'accumulent silencieusement, parfois pendant des années.</p>
+
+    <p class="article-p">Je tenais à écrire cet article pour en parler plus clairement — en rassemblant les informations que j'ai collectées auprès de dermatologues et médecins au fil des années. Je ne suis pas médecin, et je ne prétends pas l'être — mais j'ai creusé le sujet pour m'assurer que ce que je partage ici est fiable.</p>
+
+    <div class="article-h2">Ce que le soleil fait vraiment à votre peau</div>
+
+    <p class="article-p"><strong>1. Le vieillissement cutané accéléré</strong><br>
+    C'est l'effet le plus silencieux — et l'un des plus importants. Les rayons UVA pénètrent profondément dans le derme et dégradent les fibres de collagène et d'élastine, responsables de la fermeté et de l'élasticité de la peau. Résultat : rides précoces, perte de tonicité, teint terne. Ce processus est invisible pendant des années — et irréversible.</p>
+
+    <p class="article-p"><strong>2. Les taches et l'hyperpigmentation</strong><br>
+    L'exposition répétée au soleil stimule la production de mélanine de façon irrégulière. C'est ce qui crée les taches brunes — souvent appelées "taches de vieillesse" ou "taches solaires" — qui apparaissent sur le visage, le décolleté, les mains. Elles peuvent mettre des années à se former, et sont très difficiles à effacer.</p>
+
+    <p class="article-p"><strong>3. Les cancers cutanés</strong><br>
+    C'est le risque le plus grave, et celui dont on parle le moins franchement. Une exposition chronique aux UV — surtout sans protection — augmente significativement le risque de développer un cancer de la peau. Il en existe plusieurs formes. Les coups de soleil répétés pendant l'enfance et l'adolescence sont particulièrement impliqués dans leur apparition à l'âge adulte.</p>
+
+    <p class="article-p">Il existe d'autres effets documentés — sur le système immunitaire cutané, sur les yeux, entre autres. Mais je ne suis pas médecin, et je préfère me limiter à ce que j'ai pu vérifier et comprendre correctement. Ce que j'ai partagé ici me semble être l'essentiel — ce que j'aurais aimé savoir plus tôt.</p>
+
+    <div class="article-h2">Ce qu'on retient</div>
+
+    <p class="article-p">Le soleil n'est pas l'ennemi. Mais l'exposition sans protection, répétée, excessive — surtout pendant l'enfance — laisse des traces profondes et durables. Protéger sa peau, c'est un investissement sur le long terme. Et vouloir un teint hâlé ne devrait pas se faire au détriment de sa santé.</p>
+
+    <p class="article-p">C'est exactement pour ça qu'Ambree existe — pour vous permettre d'avoir ce glow, sans jamais entamer votre capital peau.</p>
+
+    <a href="#" class="link-under article-back" onclick="showPage('marque'); return false;">Découvrir l'approche Ambree →</a>
+  </div>
+
+  <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a></div><div class="footer-bottom">© 2026 Ambree Paris · hello@ambree-paris.fr · Mentions légales</div></footer>
+</div>
+
+<!-- ======================== -->
+<!-- ARTICLE 2 — PREMIER SPRAY TAN -->
+<!-- ======================== -->
+<div id="article-spraytan" class="page-content">
+  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="https://calendly.com/hello-ambree-paris/spray-tan-studio-paris-9e" target="_blank" class="btn btn-terra nav-cta">Prendre rendez-vous</a></div></nav>
+
+  <div class="page-hero">
+    <span class="eyebrow-light">Spray Tan</span>
+    <h1 class="page-hero-title" style="font-size:clamp(36px,6vw,56px);">Votre premier spray tan :<br><em>tout ce qu'il faut savoir</em></h1>
+  </div>
+
+  <div class="article-body">
+    <div class="article-meta">Par Sophia · Juin 2026</div>
+
+    <p class="article-p">Si vous avez déjà été curieuse à l'idée de faire un spray tan mais que vous ne savez pas par où commencer, cet article est fait pour vous. J'ai rassemblé tout ce qu'il faut savoir avant, pendant et après votre première séance.</p>
+
+    <div class="article-h2">Avant la séance : la préparation fait toute la différence</div>
+
+    <p class="article-p">Un bon spray tan commence avant même que vous arriviez. Quelques gestes simples suffisent à faire la différence entre un résultat uniforme et lumineux — et un résultat inégal.</p>
+
+    <p class="article-p"><strong>48h avant</strong> — Si vous prévoyez une épilation, un soin du visage ou tout autre traitement cutané, faites-le maintenant. Ces soins peuvent laisser des résidus ou sensibiliser la peau.</p>
+
+    <p class="article-p"><strong>La veille</strong> — Exfoliez l'ensemble du corps avec un gommage doux, sans huile. Cela retire les cellules mortes responsables d'un résultat irrégulier. C'est aussi le bon moment pour vous épiler si besoin — le faire la veille plutôt que le matin même laisse le temps aux pores de se refermer.</p>
+
+    <p class="article-p"><strong>Le jour J</strong> — Douchez-vous tôt si nécessaire, mais n'appliquez rien sur la peau ensuite. Pas de crème hydratante, pas de déodorant, pas de parfum, pas de maquillage. Arrivez avec une peau propre et nue — c'est la condition essentielle pour un résultat optimal.</p>
+
+    <div class="article-h2">Que porter pendant la séance ?</div>
+
+    <p class="article-p">Cela dépend avant tout du résultat que vous souhaitez — et de ce avec quoi vous êtes à l'aise.</p>
+
+    <p class="article-p">Sachez simplement que tout tissu crée une limite de bronzage — la zone couverte restera à votre teint naturel. Si vous voulez éviter toute trace de maillot, moins il y a de tissu, mieux c'est. Un maillot de bain sombre ou des sous-vêtements sombres fonctionnent très bien sinon. C'est vraiment comme vous le sentez.</p>
+
+    <p class="article-p">Je propose également des sous-vêtements jetables si vous le souhaitez — il suffit de me le faire savoir à la réservation.</p>
+
+    <div class="article-h2">Quoi porter après la séance ?</div>
+
+    <p class="article-p">Venez avec des vêtements amples et sombres — un pantalon large, un t-shirt ou une robe fluide, et des sandales. Après la séance, évitez tout ce qui serre : soutien-gorge ajusté, jean slim, chaussettes, chaussures fermées. La solution a besoin d'espace pour se développer sans friction.</p>
+
+    <p class="article-p">Beaucoup de clientes apportent une tenue de rechange — une robe longue ou une tenue oversize, c'est parfait.</p>
+
+    <div class="article-h2">Pendant la séance</div>
+
+    <p class="article-p">On commence toujours par un moment d'échange — vos envies, le résultat souhaité, votre carnation. C'est ce qui me permet de choisir la teinte la plus adaptée parmi le nuancier Ambree.</p>
+
+    <p class="article-p">L'application en elle-même dure entre 10 et 30 minutes selon la prestation choisie. La brume est légère et fraîche — rien d'inconfortable.</p>
+
+    <div class="article-h2">Juste après la séance</div>
+
+    <p class="article-p">Votre peau sera immédiatement plus dorée — c'est normal, c'est le bronzant cosmétique de la solution qui agit comme un guide visuel. Ce n'est pas encore votre résultat final. La vraie teinte, celle donnée par la DHA, se développe dans les 8 à 24 heures qui suivent.</p>
+
+    <p class="article-p">Pendant ce temps :</p>
+    <ul class="article-list">
+      <li>Pas d'eau — ni douche, ni transpiration, ni pluie</li>
+      <li>Pas de produits sur la peau</li>
+      <li>Des vêtements amples et sombres</li>
+      <li>Évitez de rester assise trop longtemps dans la même position</li>
+    </ul>
+
+    <div class="article-h2">La première douche</div>
+
+    <p class="article-p">Quand le temps de développement est écoulé, prenez une douche rapide à l'eau tiède — sans savon, sans frotter. Vous verrez le bronzant cosmétique partir dans l'eau, c'est tout à fait normal. Séchez-vous en tamponnant doucement, et attendez environ 30 minutes avant d'appliquer une crème hydratante.</p>
+
+    <p class="article-p">Votre teinte peut sembler plus claire juste après la douche — ne vous inquiétez pas. La DHA continue d'agir jusqu'à 24h après la séance. Regardez votre résultat final le lendemain matin.</p>
+
+    <div class="article-h2">Comment prolonger votre spray tan</div>
+
+    <p class="article-p">Un spray tan bien entretenu dure entre 7 et 10 jours. Quelques habitudes simples font toute la différence :</p>
+    <ul class="article-list">
+      <li><strong>Hydratez quotidiennement</strong> — une peau hydratée est une peau qui tient le bronzage plus longtemps.</li>
+      <li><strong>Utilisez un gel douche sans sulfates</strong> — les sulfates accélèrent l'élimination des cellules mortes, et donc du bronzage.</li>
+      <li><strong>Évitez la piscine et le jacuzzi</strong> — le chlore est l'ennemi du spray tan.</li>
+      <li><strong>Ne vous exfoliez pas</strong> — tant que vous voulez conserver votre teinte.</li>
+      <li><strong>Séchez-vous en tamponnant</strong>, jamais en frottant.</li>
+    </ul>
+
+    <div class="article-h2">Ce qu'on retient</div>
+
+    <p class="article-p">Un spray tan, ça se prépare et ça s'entretient — mais rien de compliqué. En suivant ces quelques gestes, vous repartirez avec un hâle naturel, lumineux, et qui dure.</p>
+
+    <p class="article-p">Des questions avant votre première séance ? N'hésitez pas à me contacter.</p>
+
+    <div class="article-ps">PS : toutes ces étapes peuvent donner l'impression que c'est compliqué au premier abord — mais croyez-moi, c'est bien plus simple à faire qu'à décrire. Si je devais retenir deux choses : gommage la veille, peau nue le jour J. Pour le reste, faites-moi confiance. Vous allez adorer.</div>
+
+    <a href="#" class="link-under article-back" onclick="showPage('prestations'); return false;">Réserver ma séance →</a>
+  </div>
 
   <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a></div><div class="footer-bottom">© 2026 Ambree Paris · hello@ambree-paris.fr · Mentions légales</div></footer>
 </div>
@@ -1168,20 +1324,26 @@
 
   function sendDomicileEmail() {
     const nom = document.getElementById('dom-nom').value || '';
+    const email = document.getElementById('dom-email').value || '';
+    const tel = document.getElementById('dom-tel').value || '';
     const adresse = document.getElementById('dom-adresse').value || '';
     const date = document.getElementById('dom-date').value || '';
     const heure = document.getElementById('dom-heure').value || '';
     const prestation = document.getElementById('dom-prestation').value || '';
     const peau = document.getElementById('dom-peau').value || '';
+    const experience = document.getElementById('dom-experience').value || '';
     const message = document.getElementById('dom-message').value || '';
     const subject = encodeURIComponent('Demande de réservation à domicile — ' + nom);
     const body = encodeURIComponent(
       'Nom : ' + nom + '\n' +
+      'Email : ' + email + '\n' +
+      'Téléphone : ' + tel + '\n' +
       'Adresse : ' + adresse + '\n' +
       'Date souhaitée : ' + date + '\n' +
       'Heure souhaitée : ' + heure + '\n' +
       'Prestation : ' + prestation + '\n' +
-      'Type de peau : ' + peau + '\n\n' +
+      'Type de peau : ' + peau + '\n' +
+      'Déjà fait un spray tan : ' + experience + '\n\n' +
       'Message :\n' + message
     );
     window.location.href = 'mailto:hello@ambree-paris.fr?subject=' + subject + '&body=' + body;
