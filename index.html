@@ -32,6 +32,102 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien de temps dure une séance de spray tan ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La séance peut durer de 15 à 45 minutes selon la prestation choisie. Par exemple, un corps entier + visage prend environ 45 minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment bien préparer ma séance de Spray Tan ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Exfoliez tout le corps la veille, une étape clé pour garantir un spray tan uniforme. Évitez tout soin hydratant, huile ou déodorant le jour de la séance. Épilez-vous au moins 24h avant votre séance (il est possible de le faire après, mais il est recommandé d'attendre 48h). Prévoyez une tenue ample et sombre pour après la séance. En été, des sandales ou tongs sont recommandées."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels produits utilisez-vous (sont-ils clean/vegan) ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "J'utilise des solutions professionnelles à base de DHA d'origine naturelle (extrait de betterave ou canne à sucre), certifiées vegan, sans paraben. Les formules s'adaptent à chaque carnation pour un résultat naturel, sans effet orangé."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps dure le bronzage et comment le prolonger ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le bronzage dure entre 7 à 10 jours en fonction de son entretien. Il est recommandé de s'hydrater la peau tous les jours pour maintenir le bronzage le plus longtemps possible, et cela aide aussi à le faire s'estomper plus uniformément."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le spray tan tache-t-il les vêtements ou les draps ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le spray tan est à la base transparent — ce sont les colorants alimentaires présents dans la solution qui donnent cette teinte immédiate et peuvent occasionnellement laisser une trace. En général, cela part facilement au lavage, mais par précaution, vous pouvez privilégier des draps de couleur plutôt que blancs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je me doucher juste après ma séance ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La première douche se fait généralement entre 6 et 8h après la séance, selon la recommandation de votre Spray Tan artist à l'issue de votre rendez-vous."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je m'exposer au soleil après un spray tan ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, il n'y a aucun problème à s'exposer au soleil après un spray tan. Le spray tan n'offre simplement aucune protection solaire — une protection SPF reste indispensable en cas d'exposition, comme toujours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dans quels arrondissements proposez-vous le service à domicile ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Je me déplace principalement dans les 2e, 3e, 4e, 8e, 9e, 10e et 11e arrondissements. Je reste toutefois ouverte à d'autres arrondissements parisiens — un supplément peut s'appliquer au-delà de cette zone, ainsi que pour les rendez-vous en soirée après 20h et le dimanche."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont vos tarifs ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Retrouvez le détail de mes tarifs sur la page « À la carte »."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment réserver un rendez-vous ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Via le bouton « Prendre rendez-vous » sur le site, ou par message sur Instagram ou WhatsApp."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vous organisez un événement (mariage, EVJF, photoshoot) ou une prestation en groupe ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "N'hésitez pas à nous envoyer un message sur la page Contact pour toute demande de prestation en groupe ou événement particulier."
+      }
+    }
+  ]
+}
+</script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@200;300;400&display=swap');
 
@@ -774,6 +870,43 @@
     .testi-grid { display: grid; }
   }
 
+  /* FAQ */
+  .faq-item {
+    border-bottom: 1px solid var(--bordeaux-soft);
+    padding: 18px 0;
+    text-align: left;
+  }
+  .faq-item summary {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    color: var(--bordeaux);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: var(--terra);
+    flex-shrink: 0;
+  }
+  .faq-item[open] summary::after { content: '–'; }
+  .faq-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .faq-item ul {
+    margin: 10px 0 0 18px;
+    font-size: 14px;
+    opacity: 0.65;
+    line-height: 1.8;
+  }
 </style>
 </head>
 <body>
@@ -886,6 +1019,14 @@
   <section class="section-terra">
     <h2 style="font-size:clamp(28px,5vw,44px); font-style:italic; color:var(--lin); margin-bottom:12px; font-weight:300;">Prête pour votre hâle ?</h2>
     <p style="color:var(--lin); opacity:0.65;">Studio Paris 9e · À domicile disponible · Prenez rendez-vous en quelques secondes.</p>
+  </section>
+
+  <!-- FAQ TEASER -->
+  <section style="padding:70px 24px; text-align:center; background:rgba(196,104,58,0.08);">
+    <span class="eyebrow">Vous hésitez encore ?</span>
+    <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,3.5vw,32px); margin:8px 0 10px; color:var(--bordeaux);">Des questions avant de réserver ?</h2>
+    <p style="max-width:440px; margin:0 auto 20px; font-size:14px;">Exfoliation, tenue, durée du bronzage… retrouvez toutes les réponses dans notre FAQ.</p>
+    <a href="#" class="btn btn-terra" onclick="goToFAQ(); return false;">Consulter la FAQ</a>
   </section>
 
   <!-- FOOTER -->
@@ -1158,6 +1299,71 @@
       <div class="con-row"><div class="con-icon">🏠</div><div><div class="con-label">À domicile</div><div class="con-value">Sur demande</div><div class="con-note">Certains arrondissements</div></div></div>
       <div class="con-row"><div class="con-icon">💳</div><div><div class="con-label">Paiement</div><div class="con-value">Wero · Espèces</div></div></div>
     </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <span class="eyebrow">Questions fréquentes</span>
+    <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:22px;">On répond à vos questions</h2>
+
+    <p style="font-size:13px; opacity:0.5; margin-bottom:6px;">Avant la séance</p>
+    <details class="faq-item">
+      <summary>Combien de temps dure une séance de spray tan ?</summary>
+      <p>La séance peut durer de 15 à 45 minutes selon la prestation choisie. Par exemple, un corps entier + visage prend environ 45 minutes.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Comment bien préparer ma séance de Spray Tan ?</summary>
+      <p>Voici les points clés à respecter :</p>
+      <ul>
+        <li>Exfoliez tout le corps la veille, une étape clé pour garantir un spray tan uniforme</li>
+        <li>Évitez tout soin hydratant, huile ou déodorant le jour de la séance</li>
+        <li>Épilez-vous au moins 24h avant votre séance (il est possible de le faire après, mais il est recommandé d'attendre 48h)</li>
+        <li>Prévoyez une tenue ample et sombre pour après la séance, pour plus de confort et éviter toute trace ou mouvement de produit</li>
+        <li>En été, des sandales ou tongs sont recommandées (facultatif selon la saison)</li>
+      </ul>
+    </details>
+    <details class="faq-item">
+      <summary>Quels produits utilisez-vous (sont-ils clean/vegan) ?</summary>
+      <p>J'utilise des solutions professionnelles à base de DHA d'origine naturelle (extrait de betterave ou canne à sucre), certifiées vegan, sans paraben. Les formules s'adaptent à chaque carnation pour un résultat naturel, sans effet orangé.</p>
+    </details>
+
+    <p style="font-size:13px; opacity:0.5; margin:22px 0 6px;">Après la séance</p>
+    <details class="faq-item">
+      <summary>Combien de temps dure le bronzage et comment le prolonger ?</summary>
+      <p>Le bronzage dure entre 7 à 10 jours en fonction de son entretien. Il est recommandé de s'hydrater la peau tous les jours pour maintenir le bronzage le plus longtemps possible, et cela aide aussi à le faire s'estomper plus uniformément.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Le spray tan tache-t-il les vêtements ou les draps ?</summary>
+      <p>Le spray tan est à la base transparent — ce sont les colorants alimentaires présents dans la solution qui donnent cette teinte immédiate et peuvent occasionnellement laisser une trace. En général, cela part facilement au lavage, mais par précaution, vous pouvez privilégier des draps de couleur plutôt que blancs si vous préférez éviter tout risque de tache.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Puis-je me doucher juste après ma séance ?</summary>
+      <p>La première douche se fait généralement entre 6 et 8h après la séance, selon la recommandation de votre Spray Tan artist à l'issue de votre rendez-vous.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Puis-je m'exposer au soleil après un spray tan ?</summary>
+      <p>Oui, il n'y a aucun problème à s'exposer au soleil après un spray tan. Le spray tan n'offre simplement aucune protection solaire — une protection SPF reste indispensable en cas d'exposition, comme toujours.</p>
+    </details>
+
+    <p style="font-size:13px; opacity:0.5; margin:22px 0 6px;">Pratique / Réservation</p>
+    <details class="faq-item">
+      <summary>Dans quels arrondissements proposez-vous le service à domicile ?</summary>
+      <p>Je me déplace principalement dans les 2e, 3e, 4e, 8e, 9e, 10e et 11e arrondissements. Je reste toutefois ouverte à d'autres arrondissements parisiens — un supplément peut s'appliquer au-delà de cette zone, ainsi que pour les rendez-vous en soirée après 20h et le dimanche. Retrouvez le détail sur la page « Prestations à domicile », et n'hésitez pas à envoyer une demande de devis directement depuis cette page.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Quels sont vos tarifs ?</summary>
+      <p>Retrouvez le détail de mes tarifs sur la page « À la carte ».</p>
+    </details>
+    <details class="faq-item">
+      <summary>Comment réserver un rendez-vous ?</summary>
+      <p>Via le bouton « Prendre rendez-vous » sur le site, ou par message sur Instagram ou WhatsApp.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Vous organisez un événement (mariage, EVJF, photoshoot) ou une prestation en groupe ?</summary>
+      <p>N'hésitez pas à nous envoyer un message sur la page <a href="#" class="link-under" onclick="showPage('contact'); return false;" style="font-size:14px;">Contact</a> pour toute demande de prestation en groupe ou événement particulier.</p>
+    </details>
   </section>
 
   <section class="section-terra">
@@ -1543,6 +1749,14 @@
     document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
     document.getElementById(id).classList.add('active');
     window.scrollTo(0, 0);
+  }
+
+  function goToFAQ() {
+    showPage('prestations');
+    setTimeout(function() {
+      var faq = document.getElementById('faq');
+      if (faq) faq.scrollIntoView({ behavior: 'smooth' });
+    }, 50);
   }
 
   function openMobileMenu() {
