@@ -907,6 +907,46 @@
     opacity: 0.65;
     line-height: 1.8;
   }
+  /* COOKIE BANNER */
+  .cookie-banner {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 999;
+    background: var(--bordeaux);
+    color: var(--lin);
+    padding: 20px 24px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+  }
+  .cookie-banner.open { display: flex; }
+  .cookie-banner p {
+    color: var(--lin);
+    opacity: 0.85;
+    font-size: 13px;
+    margin: 0;
+    max-width: 560px;
+    line-height: 1.6;
+  }
+  .cookie-banner a { color: var(--lin); text-decoration: underline; }
+  .cookie-banner-actions { display: flex; gap: 10px; flex-shrink: 0; }
+  .cookie-btn {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    padding: 10px 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .cookie-btn-accept { background: var(--terra); color: var(--lin); }
+  .cookie-btn-decline { background: transparent; color: var(--lin); border: 1px solid rgba(237,227,211,0.35); }
+  @media (max-width: 640px) {
+    .cookie-banner { flex-direction: column; text-align: center; }
+  }
 </style>
 </head>
 <body>
@@ -994,7 +1034,7 @@
   <section class="section">
     <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:28px;">Avis clients</h2>
     <!-- Elfsight Google Reviews | Ambree Paris -->
-    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <script type="text/plain" data-cookie-consent="analytics" data-src="https://elfsightcdn.com/platform.js" async></script>
     <div class="elfsight-app-5a929939-7ecd-445a-8a70-89c726e4b3b2" data-elfsight-app-lazy></div>
   </section>
 
@@ -1759,6 +1799,30 @@
     }, 50);
   }
 
+  function loadConsentedScripts() {
+    document.querySelectorAll('script[data-cookie-consent="analytics"]').forEach(function(oldScript) {
+      var newScript = document.createElement('script');
+      newScript.src = oldScript.getAttribute('data-src');
+      newScript.async = true;
+      oldScript.parentNode.replaceChild(newScript, oldScript);
+    });
+  }
+
+  function handleCookieChoice(accepted) {
+    localStorage.setItem('ambree_cookie_consent', accepted ? 'accepted' : 'declined');
+    document.getElementById('cookie-banner').classList.remove('open');
+    if (accepted) loadConsentedScripts();
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var consent = localStorage.getItem('ambree_cookie_consent');
+    if (consent === 'accepted') {
+      loadConsentedScripts();
+    } else if (consent !== 'declined') {
+      document.getElementById('cookie-banner').classList.add('open');
+    }
+  });
+
   function openMobileMenu() {
     document.getElementById('mobile-overlay').classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -1788,5 +1852,13 @@
   }
 </script>
 
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>Nous utilisons des cookies pour afficher certains contenus (comme nos avis clients). Vous pouvez accepter ou refuser leur dépôt.</p>
+    <div class="cookie-banner-actions">
+      <button class="cookie-btn cookie-btn-decline" onclick="handleCookieChoice(false)">Refuser</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="handleCookieChoice(true)">Accepter</button>
+    </div>
+  </div>
 </body>
 </html>
