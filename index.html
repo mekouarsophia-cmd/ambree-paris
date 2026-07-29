@@ -1429,14 +1429,14 @@
 
   <section class="section">
     <div class="filters">
-      <div class="filter-active">Tous</div>
-      <div class="filter-inactive">Spray Tan</div>
-      <div class="filter-inactive">Le Journal Beauté by Ambree</div>
+      <div class="filter-active" onclick="filterBlogArticles('tous', this)">Tous</div>
+      <div class="filter-inactive" onclick="filterBlogArticles('spray', this)">Spray Tan</div>
+      <div class="filter-inactive" onclick="filterBlogArticles('journal', this)">Le Journal Beauté by Ambree</div>
     </div>
 
     <div class="grid-2" style="gap:30px; align-items:start;">
       <!-- Featured -->
-      <div>
+      <div data-cat="journal">
         <span class="eyebrow">À la une</span>
         <div class="blog-card" style="width:100%;">
           <div class="blog-card-img" style="height:200px; padding:0; overflow:hidden;"><img src="images/capital-soleil.jpg" alt="Crèmes solaires sur le sable" style="width:100%; height:100%; object-fit:cover; object-position:center 60%;"></div>
@@ -1452,11 +1452,11 @@
       <!-- Liste -->
       <div>
         <span class="eyebrow">Tous les articles</span>
-        <div style="display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--bordeaux-soft); align-items:flex-start; cursor:pointer;" onclick="showPage('article-spraytan')">
+        <div data-cat="spray" style="display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--bordeaux-soft); align-items:flex-start; cursor:pointer;" onclick="showPage('article-spraytan')">
           <div style="width:80px; height:80px; border-radius:6px; background:linear-gradient(135deg,#6B7C4E,#3D2010); flex-shrink:0;"></div>
           <div><div class="blog-card-cat">Spray Tan</div><div class="blog-card-title" style="font-size:16px; margin-bottom:4px;">Votre premier spray tan : tout ce qu'il faut savoir</div><div style="font-size:8px; color:var(--bordeaux); opacity:0.3; letter-spacing:1px;">Par Sophia · Juin 2026</div></div>
         </div>
-        <div style="display:flex; gap:14px; padding:16px 0; align-items:flex-start; opacity:0.35;">
+        <div data-cat="journal" style="display:flex; gap:14px; padding:16px 0; align-items:flex-start; opacity:0.35;">
           <div style="width:80px; height:80px; border-radius:6px; background:rgba(61,0,0,0.08); border:1px dashed rgba(61,0,0,0.15); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:8px; color:var(--bordeaux);">bientôt</div>
           <div><div class="blog-card-cat">Le Journal Beauté by Ambree</div><div class="blog-card-title" style="font-size:16px; margin-bottom:4px;">Prochain article — bientôt disponible</div><div style="font-size:8px; color:var(--bordeaux); opacity:0.3; letter-spacing:1px;">À venir</div></div>
         </div>
@@ -1609,6 +1609,7 @@
     <p class="article-p">C'est exactement pour ça qu'Ambree existe — pour vous permettre d'avoir ce glow, sans jamais entamer votre capital peau.</p>
 
     <a href="#" class="link-under article-back" onclick="showPage('marque'); return false;">Découvrir l'approche Ambree →</a>
+    <a href="#" onclick="showPage('blog'); return false;" style="display:block; margin-top:16px; font-size:11px; letter-spacing:1px; color:var(--bordeaux); opacity:0.45; text-decoration:none;">← Retour au blog</a>
   </div>
 
   <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a></div><div class="footer-bottom">© 2026 Ambree Paris · 2 rue de Provence, 75009 Paris · 06 12 54 68 02 · hello@ambree-paris.fr · Mentions légales · <a href="#" onclick="openCookieBanner(); return false;" style="text-decoration:underline; opacity:0.8;">Gérer mes cookies</a></div></footer>
@@ -1698,6 +1699,7 @@
     <div class="article-ps">PS : toutes ces étapes peuvent donner l'impression que c'est compliqué au premier abord — mais croyez-moi, c'est bien plus simple à faire qu'à décrire. Si je devais retenir deux choses : gommage la veille, peau nue le jour J. Pour le reste, faites-moi confiance. Vous allez adorer.</div>
 
     <a href="#" class="link-under article-back" onclick="showPage('prestations'); return false;">Réserver ma séance →</a>
+    <a href="#" onclick="showPage('blog'); return false;" style="display:block; margin-top:16px; font-size:11px; letter-spacing:1px; color:var(--bordeaux); opacity:0.45; text-decoration:none;">← Retour au blog</a>
   </div>
 
   <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a></div><div class="footer-bottom">© 2026 Ambree Paris · 2 rue de Provence, 75009 Paris · 06 12 54 68 02 · hello@ambree-paris.fr · Mentions légales · <a href="#" onclick="openCookieBanner(); return false;" style="text-decoration:underline; opacity:0.8;">Gérer mes cookies</a></div></footer>
@@ -1816,6 +1818,19 @@
 
   function openCookieBanner() {
     document.getElementById('cookie-banner').classList.add('open');
+  }
+
+  function filterBlogArticles(cat, el) {
+    document.querySelectorAll('.filters > div').forEach(function(f) {
+      f.classList.remove('filter-active');
+      f.classList.add('filter-inactive');
+    });
+    el.classList.remove('filter-inactive');
+    el.classList.add('filter-active');
+
+    document.querySelectorAll('#blog [data-cat]').forEach(function(item) {
+      item.style.display = (cat === 'tous' || item.getAttribute('data-cat') === cat) ? '' : 'none';
+    });
   }
 
   document.addEventListener('DOMContentLoaded', function() {
