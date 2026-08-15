@@ -951,30 +951,31 @@
 </head>
 <body>
 
+<!-- NAV (unique, partagée par toutes les pages) -->
+<nav class="nav">
+  <a href="#" class="nav-brand" onclick="showPage('accueil'); return false;"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a>
+  <div class="nav-links">
+    <a href="#" onclick="showPage('accueil')">Accueil</a>
+    <a href="#" onclick="showPage('marque')">La Marque</a>
+    <a href="#" onclick="showPage('prestations')">Prestations</a>
+    <a href="#" onclick="showPage('blog')">Blog</a>
+    <a href="#" onclick="showPage('apropos')">À Propos</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-lang">FR | EN</div>
+    <a href="https://calendly.com/hello-ambree-paris/spray-tan-studio-paris-9e" target="_blank" class="btn btn-terra nav-cta">Prendre rendez-vous</a>
+    <button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+
 <!-- ======================== -->
 <!-- PAGE 01 — ACCUEIL -->
 <!-- ======================== -->
 <div id="accueil" class="page-content active">
 
-  <!-- NAV -->
-  <nav class="nav">
-    <a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a>
-    <div class="nav-links">
-      <a href="#" onclick="showPage('accueil')">Accueil</a>
-      <a href="#" onclick="showPage('marque')">La Marque</a>
-      <a href="#" onclick="showPage('prestations')">Prestations</a>
-      <a href="#" onclick="showPage('blog')">Blog</a>
-      <a href="#" onclick="showPage('apropos')">À Propos</a>
-      <a href="#" onclick="showPage('contact')">Contact</a>
-    </div>
-    <div class="nav-right">
-      <div class="nav-lang">FR | EN</div>
-      <a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a>
-      <button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button>
-    </div>
-  </nav>
-
-  <!-- HERO -->
+<!-- HERO -->
   <section class="hero" style="background-image:url('images/hero-photo.jpeg'); background-size:cover; background-position:center 30%;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -1069,27 +1070,13 @@
     <a href="#" class="btn btn-terra" onclick="goToFAQ(); return false;">Consulter la FAQ</a>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div>
-    <div class="footer-links">
-      <a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a>
-      <a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a>
-      <a href="#" class="footer-link" onclick="showPage('blog')">Blog</a>
-      <a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a>
-      <a href="#" class="footer-link" onclick="showPage('contact')">Contact</a>
-    </div>
-    <div class="footer-bottom">© 2026 Ambree Paris · 2 rue de Provence, 75009 Paris · 06 12 54 68 02 · hello@ambree-paris.fr · Mentions légales · <a href="#" onclick="openCookieBanner(); return false;" style="text-decoration:underline; opacity:0.8;">Gérer mes cookies</a></div>
-  </footer>
 </div>
 
 <!-- ======================== -->
 <!-- PAGE 02 — LA MARQUE -->
 <!-- ======================== -->
 <div id="marque" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a><button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button></div></nav>
-
-  <div class="page-hero">
+<div class="page-hero">
     <span class="eyebrow-light">La Marque</span>
     <h1 class="page-hero-title">L'univers<br><em>Ambree</em></h1>
   </div>
@@ -1213,16 +1200,13 @@
     <a href="#" class="btn btn-bord">Prendre rendez-vous</a>
   </section>
 
-  <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a><a href="#" class="footer-link" onclick="showPage('contact')">Contact</a></div><div class="footer-bottom">© 2026 Ambree Paris · 2 rue de Provence, 75009 Paris · 06 12 54 68 02 · hello@ambree-paris.fr · <a href="#" onclick="openCookieBanner(); return false;" style="text-decoration:underline; opacity:0.8;">Gérer mes cookies</a></div></footer>
 </div>
 
 <!-- ======================== -->
 <!-- PAGE 03 — PRESTATIONS -->
 <!-- ======================== -->
 <div id="prestations" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a><button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button></div></nav>
-
-  <div class="page-hero">
+<div class="page-hero">
     <span class="eyebrow-light">Prestations</span>
     <h1 class="page-hero-title">À la<br><em>carte</em></h1>
     <p style="color:var(--lin); opacity:0.5; margin-top:14px;">Studio Paris 9e · À domicile disponible sur demande.</p>
@@ -1412,16 +1396,13 @@
     <a href="#" class="btn btn-bord">Réserver ma séance</a>
   </section>
 
-  <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a><a href="#" class="footer-link" onclick="showPage('contact')">Contact</a></div><div class="footer-bottom">© 2026 Ambree Paris · 2 rue de Provence, 75009 Paris · 06 12 54 68 02 · hello@ambree-paris.fr · <a href="#" onclick="openCookieBanner(); return false;" style="text-decoration:underline; opacity:0.8;">Gérer mes cookies</a></div></footer>
 </div>
 
 <!-- ======================== -->
 <!-- PAGE 04 — BLOG -->
 <!-- ======================== -->
 <div id="blog" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a><button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button></div></nav>
-
-  <div class="page-hero">
+<div class="page-hero">
     <span class="eyebrow-light">Le Blog</span>
     <h1 class="page-hero-title">Peau, soleil<br><em>& beauté.</em></h1>
     <p style="color:var(--lin); opacity:0.5; margin-top:14px;">Conseils, éducation peau et coulisses d'Ambree.</p>
@@ -1467,16 +1448,13 @@
     </div>
   </section>
 
-  <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a><a href="#" class="footer-link" onclick="showPage('contact')">Contact</a></div><div class="footer-bottom">© 2026 Ambree Paris · 2 rue de Provence, 75009 Paris · 06 12 54 68 02 · hello@ambree-paris.fr · <a href="#" onclick="openCookieBanner(); return false;" style="text-decoration:underline; opacity:0.8;">Gérer mes cookies</a></div></footer>
 </div>
 
 <!-- ======================== -->
 <!-- PAGE 05 — À PROPOS -->
 <!-- ======================== -->
 <div id="apropos" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a><button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button></div></nav>
-
-  <div class="page-hero">
+<div class="page-hero">
     <span class="eyebrow-light">À Propos</span>
     <h1 class="page-hero-title" style="font-style:italic;">À Propos</h1>
   </div>
@@ -1522,16 +1500,13 @@
     <a href="#" class="btn btn-bord">Prendre rendez-vous</a>
   </section>
 
-  <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('contact')">Contact</a></div><div class="footer-bottom">© 2026 Ambree Paris · 2 rue de Provence, 75009 Paris · 06 12 54 68 02 · hello@ambree-paris.fr · <a href="#" onclick="openCookieBanner(); return false;" style="text-decoration:underline; opacity:0.8;">Gérer mes cookies</a></div></footer>
 </div>
 
 <!-- ======================== -->
 <!-- PAGE 06 — CONTACT -->
 <!-- ======================== -->
 <div id="contact" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="#" class="btn btn-terra nav-cta">Prendre rendez-vous</a><button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button></div></nav>
-
-  <div class="page-hero">
+<div class="page-hero">
     <span class="eyebrow-light">Contact</span>
     <h1 class="page-hero-title" style="font-style:italic;">Contact</h1>
     <p style="color:var(--lin); opacity:0.5; margin-top:14px;">Pour toute question, réservation ou demande particulière.</p>
@@ -1569,16 +1544,13 @@
     </div>
   </section>
 
-  <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a></div><div class="footer-bottom">© 2026 Ambree Paris · 2 rue de Provence, 75009 Paris · 06 12 54 68 02 · hello@ambree-paris.fr · Mentions légales · <a href="#" onclick="openCookieBanner(); return false;" style="text-decoration:underline; opacity:0.8;">Gérer mes cookies</a></div></footer>
 </div>
 
 <!-- ======================== -->
 <!-- ARTICLE 1 — CAPITAL SOLEIL -->
 <!-- ======================== -->
 <div id="article-soleil" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="https://calendly.com/hello-ambree-paris/spray-tan-studio-paris-9e" target="_blank" class="btn btn-terra nav-cta">Prendre rendez-vous</a><button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button></div></nav>
-
-  <div class="page-hero">
+<div class="page-hero">
     <span class="eyebrow-light">Le Journal Beauté by Ambree</span>
     <h1 class="page-hero-title" style="font-size:clamp(36px,6vw,56px);">Capital soleil :<br><em>ce qu'on ne nous dit pas assez tôt</em></h1>
   </div>
@@ -1615,16 +1587,13 @@
     <a href="#" onclick="showPage('blog'); return false;" style="display:block; margin-top:16px; font-size:11px; letter-spacing:1px; color:var(--bordeaux); opacity:0.45; text-decoration:none;">← Retour au blog</a>
   </div>
 
-  <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a></div><div class="footer-bottom">© 2026 Ambree Paris · 2 rue de Provence, 75009 Paris · 06 12 54 68 02 · hello@ambree-paris.fr · Mentions légales · <a href="#" onclick="openCookieBanner(); return false;" style="text-decoration:underline; opacity:0.8;">Gérer mes cookies</a></div></footer>
 </div>
 
 <!-- ======================== -->
 <!-- ARTICLE 2 — PREMIER SPRAY TAN -->
 <!-- ======================== -->
 <div id="article-spraytan" class="page-content">
-  <nav class="nav"><a href="#" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a><div class="nav-links"><a href="#" onclick="showPage('accueil')">Accueil</a><a href="#" onclick="showPage('marque')">La Marque</a><a href="#" onclick="showPage('prestations')">Prestations</a><a href="#" onclick="showPage('blog')">Blog</a><a href="#" onclick="showPage('apropos')">À Propos</a><a href="#" onclick="showPage('contact')">Contact</a></div><div class="nav-right"><div class="nav-lang">FR | EN</div><a href="https://calendly.com/hello-ambree-paris/spray-tan-studio-paris-9e" target="_blank" class="btn btn-terra nav-cta">Prendre rendez-vous</a><button class="hamburger-btn" onclick="openMobileMenu()"><span></span><span></span><span></span></button></div></nav>
-
-  <div class="page-hero">
+<div class="page-hero">
     <span class="eyebrow-light">Spray Tan</span>
     <h1 class="page-hero-title" style="font-size:clamp(36px,6vw,56px);">Votre premier spray tan :<br><em>tout ce qu'il faut savoir</em></h1>
   </div>
@@ -1705,12 +1674,26 @@
     <a href="#" onclick="showPage('blog'); return false;" style="display:block; margin-top:16px; font-size:11px; letter-spacing:1px; color:var(--bordeaux); opacity:0.45; text-decoration:none;">← Retour au blog</a>
   </div>
 
-  <footer class="footer"><div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div><div class="footer-links"><a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a><a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a><a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a><a href="#" class="footer-link" onclick="showPage('blog')">Blog</a><a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a></div><div class="footer-bottom">© 2026 Ambree Paris · 2 rue de Provence, 75009 Paris · 06 12 54 68 02 · hello@ambree-paris.fr · Mentions légales · <a href="#" onclick="openCookieBanner(); return false;" style="text-decoration:underline; opacity:0.8;">Gérer mes cookies</a></div></footer>
 </div>
 
 <!-- ======================== -->
 <!-- MOBILE MENU OVERLAY -->
 <!-- ======================== -->
+
+<!-- FOOTER (unique, partagé par toutes les pages) -->
+<footer class="footer">
+  <div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div>
+  <div class="footer-links">
+    <a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a>
+    <a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a>
+    <a href="#" class="footer-link" onclick="showPage('prestations')">Prestations</a>
+    <a href="#" class="footer-link" onclick="showPage('blog')">Blog</a>
+    <a href="#" class="footer-link" onclick="showPage('apropos')">À Propos</a>
+    <a href="#" class="footer-link" onclick="showPage('contact')">Contact</a>
+  </div>
+  <div class="footer-bottom">© 2026 Ambree Paris · 2 rue de Provence, 75009 Paris · 06 12 54 68 02 · hello@ambree-paris.fr · <a href="#" onclick="openCookieBanner(); return false;" style="text-decoration:underline; opacity:0.8;">Gérer mes cookies</a></div>
+</footer>
+
 <div class="mobile-overlay" id="mobile-overlay">
   <div class="mobile-overlay-header">
     <div class="mobile-overlay-logo">ambree</div>
