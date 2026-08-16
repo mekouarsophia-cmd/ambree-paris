@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capital soleil : ce qu'on ne nous dit pas assez tôt | ambree Paris</title>
+<meta name="description" content="Vieillissement cutané, taches, risques : ce que le soleil fait vraiment à la peau. Les explications d'ambree Paris pour un bronzage responsable, sans UV.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- La nav est chargée automatiquement depuis partials-nav.html -->
+<div id="nav-placeholder"></div>
+
+<div class="page-content active">
+  <div class="page-hero">
+    <span class="eyebrow-light">Le Journal Beauté by Ambree</span>
+    <h1 class="page-hero-title" style="font-size:clamp(36px,6vw,56px);">Capital soleil :<br><em>ce qu'on ne nous dit pas assez tôt</em></h1>
+  </div>
+
+  <div class="article-body">
+    <div class="article-meta">Par Sophia · Juin 2026</div>
+
+    <p class="article-p">On nous l'a tous dit, depuis qu'on est petits : mets de la crème solaire. Pour ne pas brûler, pour ne pas rentrer rouge de la plage. C'est un réflexe qu'on intègre — sans forcément comprendre pourquoi, ni ce qu'on évite vraiment.</p>
+
+    <p class="article-p">Parce que les coups de soleil, c'est visible. Ce qui l'est moins, ce sont tous les autres effets d'une exposition prolongée aux UV — ceux qui s'accumulent silencieusement, parfois pendant des années.</p>
+
+    <p class="article-p">Je tenais à écrire cet article pour en parler plus clairement — en rassemblant les informations que j'ai collectées auprès de dermatologues et médecins au fil des années. Je ne suis pas médecin, et je ne prétends pas l'être — mais j'ai creusé le sujet pour m'assurer que ce que je partage ici est fiable.</p>
+
+    <div class="article-h2">Ce que le soleil fait vraiment à votre peau</div>
+
+    <p class="article-p"><strong>1. Le vieillissement cutané accéléré</strong><br>
+    C'est l'effet le plus silencieux — et l'un des plus importants. Les rayons UVA pénètrent profondément dans le derme et dégradent les fibres de collagène et d'élastine, responsables de la fermeté et de l'élasticité de la peau. Résultat : rides précoces, perte de tonicité, teint terne. Ce processus est invisible pendant des années — et irréversible.</p>
+
+    <p class="article-p"><strong>2. Les taches et l'hyperpigmentation</strong><br>
+    L'exposition répétée au soleil stimule la production de mélanine de façon irrégulière. C'est ce qui crée les taches brunes — souvent appelées "taches de vieillesse" ou "taches solaires" — qui apparaissent sur le visage, le décolleté, les mains. Elles peuvent mettre des années à se former, et sont très difficiles à effacer.</p>
+
+    <p class="article-p"><strong>3. Les cancers cutanés</strong><br>
+    C'est le risque le plus grave, et celui dont on parle le moins franchement. Une exposition chronique aux UV — surtout sans protection — augmente significativement le risque de développer un cancer de la peau. Il en existe plusieurs formes. Les coups de soleil répétés pendant l'enfance et l'adolescence sont particulièrement impliqués dans leur apparition à l'âge adulte.</p>
+
+    <p class="article-p">Il existe d'autres effets documentés — sur le système immunitaire cutané, sur les yeux, entre autres. Mais je ne suis pas médecin, et je préfère me limiter à ce que j'ai pu vérifier et comprendre correctement. Ce que j'ai partagé ici me semble être l'essentiel — ce que j'aurais aimé savoir plus tôt.</p>
+
+    <div class="article-h2">Ce qu'on retient</div>
+
+    <p class="article-p">Le soleil n'est pas l'ennemi. Mais l'exposition sans protection, répétée, excessive — surtout pendant l'enfance — laisse des traces profondes et durables. Protéger sa peau, c'est un investissement sur le long terme. Et vouloir un teint hâlé ne devrait pas se faire au détriment de sa santé.</p>
+
+    <p class="article-p">C'est exactement pour ça qu'Ambree existe — pour vous permettre d'avoir ce glow, sans jamais entamer votre capital peau.</p>
+
+    <a href="index.html#marque" class="link-under article-back">Découvrir l'approche Ambree →</a>
+    <a href="index.html#blog" style="display:block; margin-top:16px; font-size:11px; letter-spacing:1px; color:var(--bordeaux); opacity:0.45; text-decoration:none;">← Retour au blog</a>
+  </div>
+</div>
+
+<!-- Le footer est chargé automatiquement depuis partials-footer.html -->
+<div id="footer-placeholder"></div>
+
+<script>
+  function openMobileMenu() {
+    document.getElementById('mobile-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileMenu() {
+    document.getElementById('mobile-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  fetch('partials-nav.html').then(function(r){ return r.text(); }).then(function(html){
+    document.getElementById('nav-placeholder').outerHTML = html;
+  });
+  fetch('partials-footer.html').then(function(r){ return r.text(); }).then(function(html){
+    document.getElementById('footer-placeholder').outerHTML = html;
+  });
+</script>
+
+</body>
+</html>
