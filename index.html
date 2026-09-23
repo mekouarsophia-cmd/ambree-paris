@@ -415,7 +415,7 @@
 
     <div class="tab-switch">
       <button class="tab-btn tab-active" onclick="showTab('tab-studio', this)">En Studio</button>
-      <button class="tab-btn" onclick="showTab('tab-domicile', this)">À Domicile</button>
+      <button class="tab-btn" id="btn-tab-domicile" onclick="showTab('tab-domicile', this)">À Domicile</button>
     </div>
 
     <!-- TAB STUDIO -->
@@ -910,7 +910,17 @@
     // Ouvre directement la bonne page si on arrive via un lien du type index.html#blog
     var hash = window.location.hash.replace('#', '');
     var validPages = ['accueil','marque','prestations','blog','apropos','contact'];
-    if (hash && validPages.indexOf(hash) !== -1) {
+
+    // Lien direct vers le formulaire de réservation à domicile (ex: index.html#domicile)
+    if (hash === 'domicile') {
+      showPage('prestations');
+      var domicileBtn = document.getElementById('btn-tab-domicile');
+      if (domicileBtn) { showTab('tab-domicile', domicileBtn); }
+      setTimeout(function() {
+        var domicileSection = document.getElementById('tab-domicile');
+        if (domicileSection) domicileSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    } else if (hash && validPages.indexOf(hash) !== -1) {
       showPage(hash);
     }
   });
