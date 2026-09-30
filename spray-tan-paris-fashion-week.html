@@ -72,17 +72,40 @@
 <body>
 
 <nav class="nav">
-  <a href="index.html" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Artist · Paris</span></a>
+  <a href="index.html" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a>
   <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="index.html#prestations">Services</a>
+    <a href="index.html">Accueil</a>
+    <a href="index.html#marque">La Marque</a>
+    <a href="index.html#prestations">Prestations</a>
+    <a href="index.html#blog">Blog</a>
+    <a href="index.html#apropos">À Propos</a>
     <a href="index.html#contact">Contact</a>
+    <a href="spray-tan-paris-fashion-week.html" style="opacity:1;">Events</a>
   </div>
   <div class="nav-right">
-    <div class="nav-lang"><a href="index.html" style="color:inherit; text-decoration:none;">FR</a> | EN</div>
     <a href="https://wa.me/message/KDCPG6LPYA2FJ1" target="_blank" rel="noopener" class="btn btn-terra nav-cta">Request a quote</a>
+    <button class="hamburger-btn" onclick="document.getElementById('mobile-overlay').classList.add('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
+
+<div class="mobile-overlay" id="mobile-overlay">
+  <div class="mobile-overlay-header">
+    <div class="mobile-overlay-logo">ambree</div>
+    <button class="mobile-close-btn" onclick="document.getElementById('mobile-overlay').classList.remove('open')" aria-label="Fermer"></button>
+  </div>
+  <div class="mobile-overlay-links">
+    <a href="index.html">Accueil</a>
+    <a href="index.html#marque">La Marque</a>
+    <a href="index.html#prestations">Prestations</a>
+    <a href="index.html#blog">Blog</a>
+    <a href="index.html#apropos">À Propos</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="spray-tan-paris-fashion-week.html" class="active">Events</a>
+  </div>
+  <div class="mobile-overlay-footer">
+    <a href="https://wa.me/message/KDCPG6LPYA2FJ1" target="_blank" rel="noopener" class="mobile-overlay-cta">Request a quote</a>
+  </div>
+</div>
 
 <div class="page-hero">
   <span class="eyebrow-light">Fashion Week · Events · Photo shoots</span>
@@ -145,10 +168,13 @@
 <footer class="footer">
   <div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Artist · Paris</div></div>
   <div class="footer-links">
-    <a href="index.html" class="footer-link">Accueil (FR)</a>
+    <a href="index.html" class="footer-link">Accueil</a>
+    <a href="index.html#marque" class="footer-link">La Marque</a>
     <a href="index.html#prestations" class="footer-link">Prestations</a>
+    <a href="index.html#blog" class="footer-link">Blog</a>
+    <a href="index.html#apropos" class="footer-link">À Propos</a>
     <a href="index.html#contact" class="footer-link">Contact</a>
-    <a href="https://www.instagram.com/ambree_paris" target="_blank" rel="noopener" class="footer-link">Instagram</a>
+    <a href="spray-tan-paris-fashion-week.html" class="footer-link">Events</a>
   </div>
   <div class="footer-bottom">© 2026 ambree Paris · 2 rue de Provence, 75009 Paris · +33 6 12 54 68 02 · hello@ambree-paris.fr</div>
 </footer>
