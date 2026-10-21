@@ -6,17 +6,37 @@
 <link rel="icon" type="image/jpeg" href="images/favicon.jpeg">
 <link rel="canonical" href="https://ambree-paris.fr/spray-tan-domicile-paris.html">
 <title>Spray Tan à domicile Paris – Au temps passé | ambree</title>
-<meta name="description" content="Spray tan à domicile partout à Paris : 80 € de l'heure, trajet compris, dès 120 €. Je viens avec tout le matériel. Devis précis sous 2 heures.">
+<meta name="description" content="Spray tan à domicile partout à Paris : 80 € de l'heure, trajet compris, dès 120 €. Je viens avec tout le matériel. Estimez votre tarif en ligne.">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ambree Paris">
 <meta property="og:title" content="Spray tan à domicile à Paris – Au temps passé, trajet compris | ambree Paris">
-<meta property="og:description" content="Spray tan à domicile partout à Paris : 80 € de l'heure, trajet compris, dès 120 €. Je viens avec tout le matériel. Devis précis sous 2 heures.">
+<meta property="og:description" content="Spray tan à domicile partout à Paris : 80 € de l'heure, trajet compris, dès 120 €. Je viens avec tout le matériel. Estimez votre tarif en ligne.">
 <meta property="og:url" content="https://ambree-paris.fr/spray-tan-domicile-paris.html">
 <meta property="og:image" content="https://ambree-paris.fr/images/hero-photo.jpeg">
 <meta property="og:locale" content="fr_FR">
 
 <link rel="stylesheet" href="styles.css">
+<style>
+  .sim{margin-top:34px;padding:26px 22px;border:1px solid rgba(61,0,0,0.15);border-radius:6px;background:rgba(196,104,58,0.04)}
+  .sim-eyebrow{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--terra);margin-bottom:10px}
+  .sim-intro{font-size:13px;margin-bottom:20px}
+  .sim-choice{display:flex;gap:22px;font-size:13px;color:var(--bordeaux)}
+  .sim-choice label{display:flex;align-items:center;gap:8px;cursor:pointer}
+  .sim-choice input{accent-color:var(--terra)}
+  .sim-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .sim-adresse-field{position:relative}
+  .sim-suggestions{position:absolute;left:0;right:0;top:100%;z-index:20;background:var(--lin);border:1px solid rgba(61,0,0,0.18);border-top:0;border-radius:0 0 4px 4px;box-shadow:0 8px 20px rgba(61,0,0,0.08)}
+  .sim-suggestions button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid rgba(61,0,0,0.06);padding:11px 14px;font:inherit;font-size:13px;color:var(--bordeaux);cursor:pointer}
+  .sim-suggestions button:hover,.sim-suggestions button:focus{background:rgba(196,104,58,0.08)}
+  .sim-result{margin-top:22px;padding:20px;background:var(--lin);border:1px solid rgba(196,104,58,0.35);border-radius:6px}
+  .sim-result .sim-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--terra)}
+  .sim-result .sim-price{font-family:'Cormorant Garamond',serif;font-size:42px;color:var(--terra);line-height:1.1;margin:6px 0 10px}
+  .sim-result .sim-detail{font-size:12px;color:var(--bordeaux);opacity:0.75;line-height:1.7}
+  .sim-result .sim-warn{font-size:13px;color:var(--bordeaux)}
+  .sim-send{margin-top:26px;padding-top:22px;border-top:1px solid rgba(61,0,0,0.1)}
+  .sim-note{font-size:11px;color:var(--bordeaux);opacity:0.6;margin-top:14px;line-height:1.6}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -67,7 +87,7 @@
       "name": "Où vous déplacez-vous, et comment est calculé le tarif à domicile ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Je me déplace dans tout Paris. À domicile, le tarif est calculé sur le temps passé, trajet aller-retour compris : 80 € de l'heure, par demi-heure entamée, avec un minimum de 1 h 30 (120 €). À l'hôtel, je réserve un créneau d'au moins 2 heures (160 €). Les rendez-vous après 20 h ou le dimanche ont un supplément de 40 €. Envoyez-moi votre adresse via le formulaire de cette page : je vous réponds sous 2 heures avec un devis précis."
+        "text": "Je me déplace dans tout Paris. À domicile, le tarif est calculé sur le temps passé, trajet aller-retour compris : 80 € de l'heure, par demi-heure entamée, avec un minimum de 1 h 30 (120 €). À l'hôtel, je réserve un créneau d'au moins 2 heures (160 €). Les rendez-vous après 20 h ou le dimanche ont un supplément de 40 €. Estimez votre tarif avec le simulateur de cette page, puis envoyez-moi votre demande : je vous confirme le tarif."
       }
     },
     {
@@ -140,7 +160,7 @@
 <div class="page-hero">
     <span class="eyebrow-light">Prestations</span>
     <h1 class="page-hero-title">Spray tan à domicile<br><em>Partout à Paris</em></h1>
-    <p style="color:var(--lin); opacity:0.5; margin-top:14px;">Au temps passé, trajet compris · Devis sous 2 heures.</p>
+    <p style="color:var(--lin); opacity:0.5; margin-top:14px;">Au temps passé, trajet compris · Estimation en ligne.</p>
   </div>
 
   <section class="section">
@@ -155,66 +175,40 @@
       <div class="rule-row"><div class="rule-star">✦</div><div><div class="rule-text-fr">Après 20&nbsp;h ou le dimanche : +40&nbsp;€</div><div class="rule-text-en">After 8pm or on Sundays : +€40</div></div></div>
       <div class="rule-row"><div class="rule-star">✦</div><div><div class="rule-text-fr">Au-delà du créneau prévu : 40&nbsp;€ par demi-heure</div><div class="rule-text-en">Beyond the booked time : €40 per half hour</div></div></div>
 
-      <div class="info-note" style="margin-top:20px;">Envoyez-moi votre adresse via le formulaire ci-dessous : je vous réponds sous 2 heures avec un devis précis.</div>
+      <!-- SIMULATEUR -->
+      <div id="simulateur" class="sim" style="scroll-margin-top:90px;">
+        <div class="sim-eyebrow">Estimez votre tarif</div>
+        <p class="sim-intro">Indiquez votre adresse et le créneau souhaité : le simulateur calcule mon trajet en transports en commun et vous donne une estimation.</p>
 
-      <!-- FORMULAIRE DOMICILE -->
-      <div id="demande" style="margin-top:30px; scroll-margin-top:90px;">
-        <div class="form-field"><label class="form-label">Votre nom</label><input type="text" id="dom-nom" class="form-input" placeholder="Marie Dupont"></div>
-        <div class="form-field"><label class="form-label">Votre email</label><input type="email" id="dom-email" class="form-input" placeholder="marie@email.com"></div>
-        <div class="form-field"><label class="form-label">Votre téléphone</label><input type="tel" id="dom-tel" class="form-input" placeholder="06 12 34 56 78"></div>
-        <div class="form-field"><label class="form-label">Votre adresse</label><input type="text" id="dom-adresse" class="form-input" placeholder="12 rue de Paris, 75010 Paris"></div>
-        <div class="form-field"><label class="form-label">Date souhaitée</label><input type="date" id="dom-date" class="form-input"></div>
-        <div class="form-field"><label class="form-label">Heure souhaitée</label>
-          <select id="dom-heure" class="form-input">
-            <option value="">Sélectionner…</option>
-            <option>10:00</option>
-            <option>11:00</option>
-            <option>12:00</option>
-            <option>13:00</option>
-            <option>14:00</option>
-            <option>15:00</option>
-            <option>16:00</option>
-            <option>17:00</option>
-            <option>18:00</option>
-            <option>19:00</option>
-            <option>20:00</option>
-            <option>21:00 (+40 €)</option>
-            <option>22:00 (+40 €)</option>
-            <option>23:00 (+40 €)</option>
-          </select>
+        <div class="form-field"><span class="form-label">Lieu</span>
+          <div class="sim-choice">
+            <label><input type="radio" name="sim-lieu" value="domicile" checked> À domicile</label>
+            <label><input type="radio" name="sim-lieu" value="hotel"> À l'hôtel</label>
+          </div>
         </div>
-        <div class="form-field"><label class="form-label">Type de prestation</label>
-          <select id="dom-prestation" class="form-input">
-            <option>Corps entier & Visage</option>
-            <option>Corps entier</option>
-            <option>Haut du corps</option>
-            <option>Bas du corps</option>
-            <option>Visage & Décolleté</option>
-          </select>
+        <div class="form-field sim-adresse-field">
+          <label class="form-label" for="sim-adresse">Votre adresse</label>
+          <input type="text" id="sim-adresse" class="form-input" placeholder="12 rue de Paris, 75010 Paris" autocomplete="off">
+          <div id="sim-suggestions" class="sim-suggestions" hidden></div>
         </div>
-        <div class="form-field"><label class="form-label">Votre type de peau</label>
-          <select id="dom-peau" class="form-input">
-            <option value="">Sélectionner…</option>
-            <option>Phototype I — Peau très claire, brûle systématiquement, ne bronze jamais (peau laiteuse, taches de rousseur fréquentes)</option>
-            <option>Phototype II — Peau claire, brûle facilement, bronze très peu et difficilement</option>
-            <option>Phototype III — Peau claire à intermédiaire, brûle parfois, bronze progressivement</option>
-            <option>Phototype IV — Peau mate, brûle rarement, bronze facilement et rapidement</option>
-            <option>Phototype V — Peau foncée, brûle très rarement, bronze toujours intensément</option>
-            <option>Phototype VI — Peau noire, ne brûle jamais</option>
-            <option>Je ne sais pas — j'en discuterai avec vous le jour J</option>
-          </select>
+        <div class="sim-row">
+          <div class="form-field"><label class="form-label" for="sim-date">Date</label><input type="date" id="sim-date" class="form-input"></div>
+          <div class="form-field"><label class="form-label" for="sim-heure">Heure</label><select id="sim-heure" class="form-input"></select></div>
         </div>
-        <div class="form-field"><label class="form-label">Avez-vous déjà fait un spray tan ?</label>
-          <select id="dom-experience" class="form-input">
-            <option value="">Sélectionner…</option>
-            <option>Oui</option>
-            <option>Non, c'est ma première fois</option>
-          </select>
+        <a href="#" class="btn btn-terra btn-block" id="sim-calc">Calculer l'estimation</a>
+
+        <div id="sim-result" class="sim-result" hidden></div>
+
+        <div class="sim-send">
+          <div class="form-field"><label class="form-label" for="sim-prenom">Votre prénom</label><input type="text" id="sim-prenom" class="form-input" placeholder="Marie"></div>
+          <div class="form-field"><label class="form-label" for="sim-message">Message (facultatif)</label><textarea id="sim-message" class="form-input form-textarea" placeholder="Une précision, le résultat souhaité…"></textarea></div>
+          <a href="#" class="btn btn-terra btn-block" id="sim-whatsapp">Envoyer ma demande sur WhatsApp</a>
+          <a href="#" class="btn btn-out btn-block" id="sim-email" style="margin-top:10px;">Envoyer par email</a>
+          <div class="sim-note">L'estimation est indicative. Je vérifie chaque demande et vous confirme le tarif définitif avant le rendez-vous.</div>
         </div>
-        <div class="form-field"><label class="form-label">Message — résultat souhaité, précisions</label><textarea id="dom-message" class="form-input form-textarea" placeholder="Bonjour Sophia, je souhaiterais…"></textarea></div>
-        <a href="#" class="btn btn-terra btn-block" onclick="sendDomicileEmail(); return false;">Envoyer ma demande</a>
-        <div class="form-note">Réponse sous 24h · hello@ambree-paris.fr</div>
       </div>
+
+      <div class="info-note" style="margin-top:20px;">Une demande urgente ? <a href="https://wa.me/33612546802" target="_blank" rel="noopener" class="link-inline">Écrivez-moi directement sur WhatsApp</a>.</div>
     <div class="info-note" style="margin-top:28px;">Vous préférez venir au studio ? <a href="spray-tan-paris-tarifs.html" class="link-inline">Voir les tarifs en studio, Paris 9e</a>.</div>
   </section>
 
@@ -238,7 +232,7 @@
     <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:22px;">On répond à vos questions</h2>
     <details class="faq-item">
       <summary>Où vous déplacez-vous, et comment est calculé le tarif à domicile ?</summary>
-      <p>Je me déplace dans tout Paris. À domicile, le tarif est calculé sur le temps passé, trajet aller-retour compris : 80 € de l'heure, par demi-heure entamée, avec un minimum de 1 h 30 (120 €). À l'hôtel, je réserve un créneau d'au moins 2 heures (160 €). Les rendez-vous après 20 h ou le dimanche ont un supplément de 40 €. Envoyez-moi votre adresse via <a href="#demande" class="link-inline">le formulaire ci-dessus</a> : je vous réponds sous 2 heures avec un devis précis.</p>
+      <p>Je me déplace dans tout Paris. À domicile, le tarif est calculé sur le temps passé, trajet aller-retour compris : 80 € de l'heure, par demi-heure entamée, avec un minimum de 1 h 30 (120 €). À l'hôtel, je réserve un créneau d'au moins 2 heures (160 €). Les rendez-vous après 20 h ou le dimanche ont un supplément de 40 €. Estimez votre tarif avec <a href="#simulateur" class="link-inline">le simulateur ci-dessus</a>, puis envoyez-moi votre demande : je vous confirme le tarif.</p>
     </details>
     <details class="faq-item">
       <summary>Comment bien préparer ma séance de Spray Tan ?</summary>
@@ -286,32 +280,148 @@
 </footer>
 
 <script>
-  function sendDomicileEmail() {
-    const nom = document.getElementById('dom-nom').value || '';
-    const email = document.getElementById('dom-email').value || '';
-    const tel = document.getElementById('dom-tel').value || '';
-    const adresse = document.getElementById('dom-adresse').value || '';
-    const date = document.getElementById('dom-date').value || '';
-    const heure = document.getElementById('dom-heure').value || '';
-    const prestation = document.getElementById('dom-prestation').value || '';
-    const peau = document.getElementById('dom-peau').value || '';
-    const experience = document.getElementById('dom-experience').value || '';
-    const message = document.getElementById('dom-message').value || '';
-    const subject = encodeURIComponent('Demande de réservation à domicile — ' + nom);
-    const body = encodeURIComponent(
-      'Nom : ' + nom + '\n' +
-      'Email : ' + email + '\n' +
-      'Téléphone : ' + tel + '\n' +
-      'Adresse : ' + adresse + '\n' +
-      'Date souhaitée : ' + date + '\n' +
-      'Heure souhaitée : ' + heure + '\n' +
-      'Prestation : ' + prestation + '\n' +
-      'Type de peau : ' + peau + '\n' +
-      'Déjà fait un spray tan : ' + experience + '\n\n' +
-      'Message :\n' + message
-    );
-    window.location.href = 'mailto:hello@ambree-paris.fr?subject=' + subject + '&body=' + body;
+  /* ===== Simulateur de tarif à domicile ===== */
+  // Adresse du service Cloudflare qui calcule les trajets. Vide = estimation indisponible, la demande peut quand même être envoyée.
+  var SIMULATEUR_URL = '';
+  var WHATSAPP = '33612546802';
+  var EMAIL = 'hello@ambree-paris.fr';
+  var SUR_PLACE = 50;            // installation + séance + rangement, en minutes
+  var TARIF_DEMI_HEURE = 40;     // 80 € de l'heure
+  var MINIMUM = { domicile: 90, hotel: 120 };   // 1 h 30 · 2 h
+  var MAJORATION = 40;           // après 20 h ou le dimanche
+
+  var choix = null;      // adresse choisie : { label, lat, lon, postcode }
+  var estimation = null; // dernier résultat affiché
+
+  var el = function (id) { return document.getElementById(id); };
+  function isoLocal(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+
+  // Créneaux de 8 h à 22 h, par demi-heure
+  (function () {
+    var h = el('sim-heure');
+    for (var m = 8 * 60; m <= 22 * 60; m += 30) {
+      var t = String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0');
+      var o = document.createElement('option'); o.value = t; o.textContent = t.replace(':', ' h ');
+      if (t === '14:00') o.selected = true;
+      h.appendChild(o);
+    }
+    var d = new Date(); d.setDate(d.getDate() + 1);
+    el('sim-date').min = isoLocal(new Date());
+    el('sim-date').value = isoLocal(d);
+  })();
+
+  // Suggestions d'adresse (service officiel de l'IGN, gratuit)
+  var timer = null;
+  el('sim-adresse').addEventListener('input', function () {
+    choix = null;
+    var q = this.value.trim();
+    clearTimeout(timer);
+    if (q.length < 5) { el('sim-suggestions').hidden = true; return; }
+    timer = setTimeout(function () {
+      fetch('https://data.geopf.fr/geocodage/search?autocomplete=1&limit=5&index=address&q=' + encodeURIComponent(q))
+        .then(function (r) { return r.json(); })
+        .then(function (j) {
+          var box = el('sim-suggestions'); box.innerHTML = '';
+          (j.features || []).forEach(function (f) {
+            var b = document.createElement('button'); b.type = 'button';
+            b.textContent = f.properties.label;
+            b.addEventListener('click', function () {
+              choix = { label: f.properties.label, lon: f.geometry.coordinates[0], lat: f.geometry.coordinates[1], postcode: f.properties.postcode || '' };
+              el('sim-adresse').value = choix.label; box.hidden = true;
+            });
+            box.appendChild(b);
+          });
+          box.hidden = !box.children.length;
+        }).catch(function () { el('sim-suggestions').hidden = true; });
+    }, 250);
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.sim-adresse-field')) el('sim-suggestions').hidden = true;
+  });
+
+  function lieu() { return document.querySelector('input[name="sim-lieu"]:checked').value; }
+  function euros(n) { return n + ' €'; }
+  function duree(min) { var h = Math.floor(min / 60), m = min % 60; return h ? h + ' h' + (m ? ' ' + String(m).padStart(2, '0') : '') : m + ' min'; }
+  function dateFr(iso) { if (!iso) return ''; var p = iso.split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
+
+  function afficher(html) { var r = el('sim-result'); r.innerHTML = html; r.hidden = false; }
+
+  function majoration(dateIso, heure) {
+    var jour = new Date(dateIso + 'T12:00:00').getDay();
+    return jour === 0 || heure > '20:00';
   }
+
+  // Les horaires de transport ne sont publiés que quelques semaines à l'avance :
+  // pour une date lointaine, on calcule sur le même jour de la semaine, dans les 7 prochains jours.
+  function dateDeCalcul(dateIso) {
+    var cible = new Date(dateIso + 'T12:00:00'), auj = new Date(); auj.setHours(12, 0, 0, 0);
+    if ((cible - auj) / 86400000 <= 14) return dateIso;
+    var d = new Date(auj); d.setDate(d.getDate() + 1);
+    while (d.getDay() !== cible.getDay()) d.setDate(d.getDate() + 1);
+    return isoLocal(d);
+  }
+
+  el('sim-calc').addEventListener('click', function (e) {
+    e.preventDefault();
+    estimation = null;
+    var dateIso = el('sim-date').value, heure = el('sim-heure').value;
+    if (!choix) { afficher('<p class="sim-warn">Choisissez votre adresse dans la liste qui s\'affiche pendant la saisie.</p>'); return; }
+    if (!dateIso) { afficher('<p class="sim-warn">Indiquez la date souhaitée.</p>'); return; }
+    if (choix.postcode.slice(0, 2) !== '75') {
+      afficher('<p class="sim-warn">Hors de Paris, le tarif se fait sur demande. Envoyez-moi votre demande ci-dessous, je reviens vers vous avec un tarif.</p>');
+      estimation = { horsParis: true }; return;
+    }
+    if (!SIMULATEUR_URL) {
+      afficher('<p class="sim-warn">L\'estimation en ligne n\'est pas disponible pour le moment. Envoyez-moi votre demande ci-dessous, je reviens vers vous avec un tarif.</p>');
+      return;
+    }
+    afficher('<p class="sim-detail">Calcul du trajet…</p>');
+    var dt = dateDeCalcul(dateIso).replace(/-/g, '') + 'T' + heure.replace(':', '');
+    fetch(SIMULATEUR_URL + '?lat=' + choix.lat + '&lon=' + choix.lon + '&dt=' + dt)
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (j.error === 'hors_paris') { afficher('<p class="sim-warn">Hors de Paris, le tarif se fait sur demande. Envoyez-moi votre demande ci-dessous.</p>'); estimation = { horsParis: true }; return; }
+        if (j.error || !j.aller) throw new Error();
+        var trajet = j.aller + j.retour, total = trajet + SUR_PLACE;
+        var facture = Math.max(MINIMUM[lieu()], Math.ceil(total / 30) * 30);
+        var maj = majoration(dateIso, heure);
+        var prix = facture / 30 * TARIF_DEMI_HEURE + (maj ? MAJORATION : 0);
+        estimation = { prix: prix };
+        afficher(
+          '<div class="sim-label">Estimation indicative</div>' +
+          '<div class="sim-price">' + euros(prix) + '</div>' +
+          '<div class="sim-detail">Trajet aller-retour estimé : ' + duree(trajet) + '<br>' +
+          'Sur place (installation, séance, rangement) : ' + duree(SUR_PLACE) + '<br>' +
+          'Temps compté : ' + duree(facture) + (facture > Math.ceil(total / 30) * 30 ? ' (minimum ' + (lieu() === 'hotel' ? 'à l\'hôtel' : 'à domicile') + ')' : '') + ' × 80 € de l\'heure' +
+          (maj ? '<br>Après 20 h ou le dimanche : +' + euros(MAJORATION) : '') + '</div>'
+        );
+      })
+      .catch(function () {
+        afficher('<p class="sim-warn">Le trajet n\'a pas pu être calculé pour cette adresse. Envoyez-moi votre demande ci-dessous, je reviens vers vous avec un tarif.</p>');
+      });
+  });
+
+  function message() {
+    var lignes = [
+      'Bonjour Sophia, je souhaiterais un spray tan ' + (lieu() === 'hotel' ? 'à l\'hôtel' : 'à domicile') + '.',
+      'Adresse : ' + (choix ? choix.label : el('sim-adresse').value),
+      'Date : ' + dateFr(el('sim-date').value) + ' à ' + el('sim-heure').value.replace(':', 'h')
+    ];
+    if (estimation && estimation.prix) lignes.push('Estimation du simulateur : ' + estimation.prix + ' €');
+    if (el('sim-prenom').value.trim()) lignes.push('Prénom : ' + el('sim-prenom').value.trim());
+    if (el('sim-message').value.trim()) lignes.push('', el('sim-message').value.trim());
+    return lignes.join('\n');
+  }
+
+  el('sim-whatsapp').addEventListener('click', function (e) {
+    e.preventDefault();
+    window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(message()), '_blank');
+  });
+  el('sim-email').addEventListener('click', function (e) {
+    e.preventDefault();
+    var sujet = 'Demande de spray tan ' + (lieu() === 'hotel' ? 'à l\'hôtel' : 'à domicile') + (el('sim-prenom').value.trim() ? ' — ' + el('sim-prenom').value.trim() : '');
+    window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(sujet) + '&body=' + encodeURIComponent(message());
+  });
 </script>
 <script src="nav.js" defer></script>
 
