@@ -43,6 +43,13 @@
 - [À propos](https://ambree-paris.fr/a-propos.html): l'histoire de Sophia
 - [Contact](https://ambree-paris.fr/contact.html): coordonnées et formulaire
 
+## English pages
+
+- [Home (EN)](https://ambree-paris.fr/en/): overview and prices
+- [Studio prices (EN)](https://ambree-paris.fr/en/spray-tan-paris-prices.html): studio prices in Paris 9th, practical info, FAQ
+- [At home & hotels (EN)](https://ambree-paris.fr/en/mobile-spray-tan-paris.html): time-based pricing and online estimate
+- [Events & Fashion Week (EN)](https://ambree-paris.fr/spray-tan-paris-fashion-week.html): mobile spray tan in hotels, shoots and events
+
 ## Articles
 
 - [Où faire un spray tan à Paris, et comment bien choisir ?](https://ambree-paris.fr/blog-ou-faire-spray-tan-paris.html)
