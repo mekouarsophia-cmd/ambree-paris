@@ -91,14 +91,14 @@
 
 <!-- NAV (unique, partagée par toutes les pages) -->
 <nav class="nav">
-  <a href="#" class="nav-brand" onclick="showPage('accueil'); return false;"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a>
+  <a href="index.html" class="nav-brand"><span class="nav-logo">ambree</span><span class="nav-tagline">Spray Tan Sur-Mesure · Paris</span></a>
   <div class="nav-links">
-    <a href="#" onclick="showPage('accueil')">Accueil</a>
-    <a href="#" onclick="showPage('marque')">La Marque</a>
+    <a href="index.html" style="opacity:1;">Accueil</a>
+    <a href="la-marque.html">La Marque</a>
     <div class="nav-drop"><button type="button" class="nav-drop-btn" aria-haspopup="true" aria-expanded="false">Prestations</button><div class="nav-drop-menu"><div class="nav-drop-menu-inner"><a href="spray-tan-paris-tarifs.html">En studio</a><a href="spray-tan-domicile-paris.html">À domicile</a><a href="pack-mariee-spray-tan-paris.html">Pack Mariée</a></div></div></div>
     <a href="blog.html">Blog</a>
     <a href="a-propos.html">À Propos</a>
-    <a href="#" onclick="showPage('contact')">Contact</a>
+    <a href="contact.html">Contact</a>
     <a href="spray-tan-paris-fashion-week.html">Events</a>
   </div>
   <div class="nav-right">
@@ -127,7 +127,7 @@
     <span class="eyebrow">Ambree Paris</span>
     <h2 style="font-size:clamp(22px,3.5vw,30px); font-style:italic; color:var(--bordeaux); line-height:1.35; margin-bottom:16px;">"Toutes les peaux méritent un bronzage lumineux, naturel et pensé pour elles."</h2>
     <p style="margin-bottom:20px;">Une expérience sur-mesure, du soin apporté à chaque cliente, pour chaque carnation. Sans soleil, sans compromis pour votre peau.</p>
-    <a href="#" class="link-under" onclick="showPage('marque')">Découvrir la marque →</a>
+    <a href="la-marque.html" class="link-under">Découvrir la marque →</a>
   </section>
 
   <hr class="divider">
@@ -220,182 +220,6 @@
 </div>
 
 <!-- ======================== -->
-<!-- PAGE 02 — LA MARQUE -->
-<!-- ======================== -->
-<div id="marque" class="page-content">
-<div class="page-hero">
-    <span class="eyebrow-light">La Marque</span>
-    <h2 class="page-hero-title">L'univers<br><em>Ambree</em></h2>
-  </div>
-
-  <!-- MISSION + VALEURS -->
-  <section class="section">
-    <div class="grid-2" style="gap:50px;">
-      <div>
-        <span class="eyebrow">Mission</span>
-        <h2 style="font-size:clamp(20px,3vw,26px); font-style:italic; line-height:1.4;">"Mettre du soleil dans votre quotidien, sans compromis pour votre peau."</h2>
-      </div>
-      <div>
-        <span class="eyebrow">Nos valeurs</span>
-        <div class="val"><div class="val-name">Beauté saine et naturelle</div><div class="val-text">Un résultat qui ressemble à un vrai bronzage, jamais à un masque. Des produits respectueux de votre peau.</div></div>
-        <div class="val"><div class="val-name">Client-first</div><div class="val-text">Une expérience pensée et orientée client, du premier message à la dernière recommandation.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- METHODE -->
-  <section class="section">
-    <span class="eyebrow">Notre approche</span>
-    <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:8px;">La Méthode Ambree</h2>
-    <p style="margin-bottom:28px;">Un beau hâle ne s'improvise pas — il se pense. Une approche en trois temps.</p>
-    <div class="grid-3">
-      <div style="padding:22px; border:1px solid var(--bordeaux-soft); border-radius:8px;">
-        <div style="font-family:'Cormorant Garamond',serif; font-size:36px; color:var(--terra); opacity:0.45; margin-bottom:8px;">01</div>
-        <div class="step-title">La consultation</div>
-        <div class="step-text">Vos envies, le résultat que vous recherchez. Ce moment transforme une simple prestation en expérience sur-mesure.</div>
-      </div>
-      <div style="padding:22px; border:1px solid var(--bordeaux-soft); border-radius:8px;">
-        <div style="font-family:'Cormorant Garamond',serif; font-size:36px; color:var(--terra); opacity:0.45; margin-bottom:8px;">02</div>
-        <div class="step-title">L'analyse de votre carnation</div>
-        <div class="step-text">Tons, sous-tons — la nuance discrète qui détermine quelle teinte vous ira vraiment.</div>
-      </div>
-      <div style="padding:22px; border:1px solid var(--bordeaux-soft); border-radius:8px;">
-        <div style="font-family:'Cormorant Garamond',serif; font-size:36px; color:var(--terra); opacity:0.45; margin-bottom:8px;">03</div>
-        <div class="step-title">Le hâle sur-mesure</div>
-        <div class="step-text">La teinte la plus adaptée parmi le nuancier Ambree. Un bronzage qui semble venir de vous.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NUANCIER -->
-  <hr class="divider">
-  <section class="section" style="padding-bottom:0;">
-    <span class="eyebrow">Le nuancier</span>
-    <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:6px;">4 teintes pour chaque carnation</h2>
-    <p style="margin-bottom:0;">Choisie selon votre phototype, vos tons et vos sous-tons — jamais au hasard.</p>
-  </section>
-  <div class="nuancier" id="nuancier-grid">
-
-    <!-- TEINTE 01 -->
-    <div class="shade-card" data-shade="0">
-      <div class="shade-slide active" style="background:#D4A96A; color:#3D0000;" data-slide="0">
-        <div class="shade-num">01</div>
-        <div class="shade-name">Douceur de Lin</div>
-        <div class="shade-desc">Pour celles qui veulent juste une touche d'éclat, comme après un weekend au soleil.</div>
-      </div>
-      <div class="shade-slide has-photo" data-slide="1"><img width="1000" height="887" loading="lazy" src="images/douceur-de-lin-avant.jpeg" alt="Avant — Douceur de Lin"><span class="shade-tag">Avant</span></div>
-      <div class="shade-slide has-photo" data-slide="2"><img width="1000" height="811" loading="lazy" src="images/douceur-de-lin-apres.jpeg" alt="Après — Douceur de Lin"><span class="shade-tag">Après</span></div>
-      <div class="shade-arrows"><button class="shade-arrow" onclick="shadeNav(0,-1)">‹</button><button class="shade-arrow" onclick="shadeNav(0,1)">›</button></div>
-      <div class="shade-dots"><button class="shade-dot active" onclick="shadeGoto(0,0)"></button><button class="shade-dot" onclick="shadeGoto(0,1)"></button><button class="shade-dot" onclick="shadeGoto(0,2)"></button></div>
-    </div>
-
-    <!-- TEINTE 02 -->
-    <div class="shade-card" data-shade="1">
-      <div class="shade-slide active" style="background:#C4683A; color:#EDE3D3;" data-slide="0">
-        <div class="shade-num">02</div>
-        <div class="shade-name">Miel Sauvage</div>
-        <div class="shade-desc">Un doré subtil. Comme un éternel été.</div>
-      </div>
-      <div class="shade-slide has-photo" data-slide="1"><img width="1000" height="862" loading="lazy" src="images/miel-sauvage-avant.jpeg" alt="Avant — Miel Sauvage"><span class="shade-tag">Avant</span></div>
-      <div class="shade-slide has-photo" data-slide="2"><img width="1000" height="878" loading="lazy" src="images/miel-sauvage-apres.jpeg" alt="Après — Miel Sauvage"><span class="shade-tag">Après</span></div>
-      <div class="shade-arrows"><button class="shade-arrow" onclick="shadeNav(1,-1)">‹</button><button class="shade-arrow" onclick="shadeNav(1,1)">›</button></div>
-      <div class="shade-dots"><button class="shade-dot active" onclick="shadeGoto(1,0)"></button><button class="shade-dot" onclick="shadeGoto(1,1)"></button><button class="shade-dot" onclick="shadeGoto(1,2)"></button></div>
-    </div>
-
-    <!-- TEINTE 03 -->
-    <div class="shade-card" data-shade="2">
-      <div class="shade-slide active" style="background:#6B7C4E; color:#EDE3D3;" data-slide="0">
-        <div class="shade-num">03</div>
-        <div class="shade-name">Dune du Sahara</div>
-        <div class="shade-desc">Plus intense, plus chaud. Pour celles qui veulent vraiment qu'on le voit.</div>
-      </div>
-      <div class="shade-slide has-photo" data-slide="1"><img width="806" height="1000" loading="lazy" src="images/dune-du-sahara-avant.jpeg" alt="Avant — Dune du Sahara"><span class="shade-tag">Avant</span></div>
-      <div class="shade-slide has-photo" data-slide="2"><img width="842" height="1000" loading="lazy" src="images/dune-du-sahara-apres.jpeg" alt="Après — Dune du Sahara"><span class="shade-tag">Après</span></div>
-      <div class="shade-arrows"><button class="shade-arrow" onclick="shadeNav(2,-1)">‹</button><button class="shade-arrow" onclick="shadeNav(2,1)">›</button></div>
-      <div class="shade-dots"><button class="shade-dot active" onclick="shadeGoto(2,0)"></button><button class="shade-dot" onclick="shadeGoto(2,1)"></button><button class="shade-dot" onclick="shadeGoto(2,2)"></button></div>
-    </div>
-
-    <!-- TEINTE 04 -->
-    <div class="shade-card" data-shade="3">
-      <div class="shade-slide active" style="background:#3D0000; color:#EDE3D3;" data-slide="0">
-        <div class="shade-num">04</div>
-        <div class="shade-name">Épicé</div>
-        <div class="shade-desc">La teinte la plus profonde, pour sublimer les carnations naturellement dorées.</div>
-      </div>
-      <div class="shade-slide has-photo" data-slide="1"><img width="717" height="1000" loading="lazy" src="images/epice-avant.jpeg" alt="Avant — Épicé"><span class="shade-tag">Avant</span></div>
-      <div class="shade-slide has-photo" data-slide="2"><img width="826" height="1000" loading="lazy" src="images/epice-apres.jpeg" alt="Après — Épicé"><span class="shade-tag">Après</span></div>
-      <div class="shade-arrows"><button class="shade-arrow" onclick="shadeNav(3,-1)">‹</button><button class="shade-arrow" onclick="shadeNav(3,1)">›</button></div>
-      <div class="shade-dots"><button class="shade-dot active" onclick="shadeGoto(3,0)"></button><button class="shade-dot" onclick="shadeGoto(3,1)"></button><button class="shade-dot" onclick="shadeGoto(3,2)"></button></div>
-    </div>
-
-  </div>
-
-  <!-- PRODUITS -->
-  <hr class="divider">
-  <section class="section">
-    <span class="eyebrow">Les produits</span>
-    <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:14px;">Vegan, clean,<br>sans compromis</h2>
-    <p>Les produits que j'utilise sont soigneusement sélectionnés : vegan, sans parabènes, à la DHA végétale — pour un résultat beau et respectueux de votre peau.</p>
-    <div class="tags"><span class="tag">Vegan</span><span class="tag">Sans parabènes</span><span class="tag">DHA végétale</span></div>
-  </section>
-
-  <section class="section-terra">
-    <h2 style="font-size:clamp(26px,4vw,40px); font-style:italic; color:var(--lin); margin-bottom:12px; font-weight:300;">Prête à découvrir votre teinte ?</h2>
-    <p style="color:var(--lin); opacity:0.65; margin-bottom:22px;">Studio Paris 9e · À domicile disponible.</p>
-    <a href="https://calendly.com/hello-ambree-paris/spray-tan-studio-paris-9e" target="_blank" class="btn btn-bord">Prendre rendez-vous</a>
-  </section>
-
-</div>
-
-<!-- ======================== -->
-<!-- PAGE 06 — CONTACT -->
-<!-- ======================== -->
-<div id="contact" class="page-content">
-<div class="page-hero">
-    <span class="eyebrow-light">Contact</span>
-    <h2 class="page-hero-title" style="font-style:italic;">Contact</h2>
-    <p style="color:var(--lin); opacity:0.5; margin-top:14px;">Pour toute question, réservation ou demande particulière.</p>
-  </div>
-
-  <section class="section">
-    <div class="grid-2" style="gap:60px;">
-      <!-- Infos -->
-      <div>
-        <span class="eyebrow">Nous trouver</span>
-        <h2 style="font-size:clamp(24px,3.5vw,32px); margin-bottom:22px;">Infos pratiques</h2>
-        <div class="con-row"><div class="con-icon">✉</div><div><div class="con-label">Email</div><div class="con-value">hello@ambree-paris.fr</div></div></div>
-        <div class="con-row"><div class="con-icon">📞</div><div><div class="con-label">Téléphone</div><div class="con-value"><a href="tel:+33612546802" style="color:inherit; text-decoration:none;">06 12 54 68 02</a></div></div></div>
-        <div class="con-row"><div class="con-icon">📍</div><div><div class="con-label">Studio</div><div class="con-value">Oui Beauty · Paris 9e</div><div class="con-note">2 rue de Provence, 75009 Paris · Le mercredi, uniquement sur rendez-vous</div></div></div>
-        <div class="con-row"><div class="con-icon">🗓</div><div><div class="con-label">Horaires</div><div class="con-value">Lundi au vendredi 10h–19h · Samedi 10h–13h</div><div class="con-note">Uniquement sur rendez-vous · Séances en français ou en anglais</div></div></div>
-        <div class="con-row"><div class="con-icon">🏠</div><div><div class="con-label">À domicile</div><div class="con-value">Tous les jours sauf le mercredi</div><div class="con-note">Voir les détails et faire votre demande via le formulaire dédié.</div><a href="spray-tan-domicile-paris.html" class="btn btn-out" style="margin-top:10px; display:inline-block;">Voir le formulaire à domicile →</a></div></div>
-        <div style="margin-top:30px;">
-          <span class="eyebrow">Suivez-nous</span>
-          <div style="font-family:'Cormorant Garamond',serif; font-size:22px; color:var(--bordeaux); margin-bottom:6px;">@ambree_paris</div>
-          <div style="font-size:9px; color:var(--bordeaux); opacity:0.35; margin-bottom:14px; letter-spacing:1px;">Spray tan, conseils peau & coulisses</div>
-          <a href="https://www.instagram.com/ambree_paris" target="_blank" class="btn btn-out">Voir sur Instagram →</a>
-        </div>
-      </div>
-      <!-- Formulaire -->
-      <div>
-        <span class="eyebrow">Nous écrire</span>
-        <h2 style="font-size:clamp(24px,3.5vw,32px); margin-bottom:10px;">Envoyez-nous<br>un message</h2>
-        <p style="font-size:11px; margin-bottom:22px;">Partenariats, collaborations, présence à un événement, devis de déplacement ou toute autre demande spécifique — ce formulaire est fait pour vous.</p>
-        <div class="grid-2" style="gap:12px;">
-          <div class="form-field"><label class="form-label">Prénom</label><input type="text" id="contact-prenom" class="form-input" placeholder="Marie"></div>
-          <div class="form-field"><label class="form-label">Email</label><input type="email" id="contact-email" class="form-input" placeholder="marie@email.com"></div>
-        </div>
-        <div class="form-field"><label class="form-label">Message</label><textarea id="contact-message" class="form-input form-textarea" placeholder="Bonjour Sophia…"></textarea></div>
-        <a href="#" class="btn btn-terra btn-block" style="margin-top:4px;" onclick="sendEmail(); return false;">Envoyer</a>
-        <div class="form-note">Réponse sous 24h · hello@ambree-paris.fr</div>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-<!-- ======================== -->
 <!-- MOBILE MENU OVERLAY -->
 <!-- ======================== -->
 
@@ -403,12 +227,12 @@
 <footer class="footer">
   <div><div class="footer-logo">ambree</div><div class="footer-tagline">Spray Tan Sur-Mesure · Paris</div></div>
   <div class="footer-links">
-    <a href="#" class="footer-link" onclick="showPage('accueil')">Accueil</a>
-    <a href="#" class="footer-link" onclick="showPage('marque')">La Marque</a>
+    <a href="index.html" class="footer-link">Accueil</a>
+    <a href="la-marque.html" class="footer-link">La Marque</a>
     <a href="spray-tan-paris-tarifs.html" class="footer-link">Prestations</a>
     <a href="blog.html" class="footer-link">Blog</a>
     <a href="a-propos.html" class="footer-link">À Propos</a>
-    <a href="#" class="footer-link" onclick="showPage('contact')">Contact</a>
+    <a href="contact.html" class="footer-link">Contact</a>
     <a href="spray-tan-paris-fashion-week.html" class="footer-link">Events</a>
   </div>
   <div class="footer-bottom">© 2026 Ambree Paris · 2 rue de Provence, 75009 Paris · 06 12 54 68 02 · hello@ambree-paris.fr · <a href="#" onclick="openCookieBanner(); return false;" style="text-decoration:underline; opacity:0.8;">Gérer mes cookies</a></div>
@@ -420,12 +244,12 @@
     <button class="mobile-close-btn" onclick="closeMobileMenu()"></button>
   </div>
   <div class="mobile-overlay-links">
-    <a href="#" onclick="navigateMobile('accueil')">Accueil</a>
-    <a href="#" onclick="navigateMobile('marque')">La Marque</a>
+    <a href="index.html" class="active">Accueil</a>
+    <a href="la-marque.html">La Marque</a>
     <div class="mobile-sub"><div class="mobile-sub-label">Prestations</div><div class="mobile-sub-links"><a href="spray-tan-paris-tarifs.html">En studio</a><a href="spray-tan-domicile-paris.html">À domicile</a><a href="pack-mariee-spray-tan-paris.html">Pack Mariée</a></div></div>
     <a href="blog.html">Blog</a>
     <a href="a-propos.html">À Propos</a>
-    <a href="#" onclick="navigateMobile('contact')">Contact</a>
+    <a href="contact.html">Contact</a>
     <a href="spray-tan-paris-fashion-week.html">Events</a>
   </div>
   <div class="mobile-overlay-footer">
@@ -435,69 +259,12 @@
 </div>
 
 <script>
-  function sendEmail() {
-    const prenom = document.getElementById('contact-prenom').value || '';
-    const email = document.getElementById('contact-email').value || '';
-    const message = document.getElementById('contact-message').value || '';
-    const subject = encodeURIComponent('Message de ' + prenom + ' via ambree-paris.fr');
-    const body = encodeURIComponent('Prénom : ' + prenom + '\nEmail : ' + email + '\n\n' + message);
-    window.location.href = 'mailto:hello@ambree-paris.fr?subject=' + subject + '&body=' + body;
-  }
-
   function showTab(tabId, btn) {
     const parent = btn.closest('.section');
     parent.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('tab-panel-active'));
     parent.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('tab-active'));
     document.getElementById(tabId).classList.add('tab-panel-active');
     btn.classList.add('tab-active');
-  }
-
-  function sendDomicileEmail() {
-    const nom = document.getElementById('dom-nom').value || '';
-    const email = document.getElementById('dom-email').value || '';
-    const tel = document.getElementById('dom-tel').value || '';
-    const adresse = document.getElementById('dom-adresse').value || '';
-    const date = document.getElementById('dom-date').value || '';
-    const heure = document.getElementById('dom-heure').value || '';
-    const prestation = document.getElementById('dom-prestation').value || '';
-    const peau = document.getElementById('dom-peau').value || '';
-    const experience = document.getElementById('dom-experience').value || '';
-    const message = document.getElementById('dom-message').value || '';
-    const subject = encodeURIComponent('Demande de réservation à domicile — ' + nom);
-    const body = encodeURIComponent(
-      'Nom : ' + nom + '\n' +
-      'Email : ' + email + '\n' +
-      'Téléphone : ' + tel + '\n' +
-      'Adresse : ' + adresse + '\n' +
-      'Date souhaitée : ' + date + '\n' +
-      'Heure souhaitée : ' + heure + '\n' +
-      'Prestation : ' + prestation + '\n' +
-      'Type de peau : ' + peau + '\n' +
-      'Déjà fait un spray tan : ' + experience + '\n\n' +
-      'Message :\n' + message
-    );
-    window.location.href = 'mailto:hello@ambree-paris.fr?subject=' + subject + '&body=' + body;
-  }
-
-  const shadeState = {0:0, 1:0, 2:0, 3:0};
-  function shadeNav(shadeIdx, dir) {
-    let cur = shadeState[shadeIdx];
-    cur = (cur + dir + 3) % 3;
-    shadeGoto(shadeIdx, cur);
-  }
-  function shadeGoto(shadeIdx, slideIdx) {
-    shadeState[shadeIdx] = slideIdx;
-    const card = document.querySelector(`.shade-card[data-shade="${shadeIdx}"]`);
-    if (!card) return;
-    card.querySelectorAll('.shade-slide').forEach(s => s.classList.remove('active'));
-    card.querySelector(`.shade-slide[data-slide="${slideIdx}"]`).classList.add('active');
-    card.querySelectorAll('.shade-dot').forEach((d,i) => d.classList.toggle('active', i === slideIdx));
-  }
-
-  function showPage(id) {
-    document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    window.scrollTo(0, 0);
   }
 
   function goToFAQ() {
@@ -531,12 +298,12 @@
       document.getElementById('cookie-banner').classList.add('open');
     }
 
-    // Ouvre directement la bonne page si on arrive via un lien du type index.html#blog
+    // Anciens liens du type index.html#blog : redirection vers la page dédiée
     var hash = window.location.hash.replace('#', '');
-    var validPages = ['accueil','marque','prestations','contact'];
-
-    // Anciens liens vers les prestations : redirection vers la page dédiée
-    if (hash === 'blog') {
+    var anciens = { blog: 'blog.html', apropos: 'a-propos.html', marque: 'la-marque.html', contact: 'contact.html' };
+    if (anciens[hash]) {
+      window.location.replace(anciens[hash]);
+    } else if (hash === 'blog') {
       window.location.replace('blog.html');
     } else if (hash === 'apropos') {
       window.location.replace('a-propos.html');
@@ -544,15 +311,12 @@
       window.location.replace('spray-tan-domicile-paris.html');
     } else if (hash === 'prestations') {
       window.location.replace('spray-tan-paris-tarifs.html');
-    } else if (hash && validPages.indexOf(hash) !== -1) {
-      showPage(hash);
     }
   });
 
   function openMobileMenu() {
     document.getElementById('mobile-overlay').classList.add('open');
     document.body.style.overflow = 'hidden';
-    updateMobileActiveLink();
   }
 
   function closeMobileMenu() {
@@ -560,22 +324,6 @@
     document.body.style.overflow = '';
   }
 
-  function navigateMobile(id) {
-    showPage(id);
-    closeMobileMenu();
-  }
-
-  function updateMobileActiveLink() {
-    const activePage = document.querySelector('.page-content.active');
-    if (!activePage) return;
-    const activeId = activePage.id;
-    document.querySelectorAll('.mobile-overlay-links a').forEach(a => {
-      a.classList.remove('active');
-      if (a.getAttribute('onclick') && a.getAttribute('onclick').includes(`'${activeId}'`)) {
-        a.classList.add('active');
-      }
-    });
-  }
 </script>
 
   <!-- COOKIE BANNER -->
